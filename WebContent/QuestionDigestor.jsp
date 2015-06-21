@@ -80,54 +80,61 @@
   </style>
 <script type="text/javascript">
 $(function() {
-        var addSolutionProcess = $('#solutionContainer');
-        var SolutionProcesses = $('#solutionContainer div').size();
+	//Remove this element
+	$('#questionEditor').on('click', '.btn-danger', function() {
+		$(this).parent().parent().remove();
+	});
         
-        $('#addNextProcess').on('click', function() {
-                var parent = $('#SolutionProcess_' + SolutionProcesses-1);
-                $('<div class="input-group"><input id="SolutionProcess' + SolutionProcesses + '" name="SolutionProcess' + SolutionProcesses + '" class="form-control" type="text" placeholder="Step description"><span class="input-group-addon btn btn-primary" id="removeThisProcess">-</span></div><textarea id="SolutionProcess' + SolutionProcesses +'" name="SolutionProcess' + SolutionProcesses +'" class="form-control" type="text" placeholder="steps involved in the solution" cols=100 rows=5></textarea>').appendTo(addSolutionProcess);
-                SolutionProcesses++;
+	//Add new process into the solution
+	var addSolutionProcess = $('#solutionContainer');
+    var solutionProcesses = $('#solutionContainer div').size();
         
-                return false;
-        });
+    $('#addNextProcess').on('click', function() {
+            var parent = $('#SolutionProcess_' + solutionProcesses-1);
+            $('<div class="row"><div class="input-group"><input id="SolutionProcess' + solutionProcesses + '" name="SolutionProcess' + solutionProcesses + '" class="form-control" type="text" placeholder="Step description"><span class="input-group-addon btn btn-danger" id="removeThisProcess">-</span></div><textarea id="SolutionProcess' + solutionProcesses +'" name="SolutionProcess' + solutionProcesses +'" class="form-control" type="text" placeholder="steps involved in the solution" cols=100 rows=5></textarea></div>').appendTo(addSolutionProcess);
+            
+            solutionProcesses++;
+            return false;
+    });
         
-        var addSolutionSteps = $('#stepsContainer');
-        var solutionSteps = $('#stepsContainer div').size();
+    //Add new step used for solving this question    
+    var addSolutionSteps = $('#stepsContainer');
+    var solutionSteps = $('#stepsContainer div').size();
+    
+    $('#addNextStep').on('click', function() {
+            var parent = $('#step_' + solutionSteps-1);
+            $('<div class="row"><div class="input-group"><select id="SolutionStep' + solutionSteps + '" name="SolutionStep' + solutionSteps + '" class="form-control"></select><span class="input-group-addon"><select id="CalculationLevel' + solutionSteps + '" name="CalculationLevel' + solutionSteps + '"><option value="1">Level 1</option><option value="2">Level 2</option><option value="3">Level 3</option></select></span><span class="input-group-addon"><select id="AnalysisLevel0" name="AnalysisLevel' + solutionSteps + '"><option value="1">YES</option><option value="0">NO</option></select></span><span class="input-group-addon btn btn-danger" id="removeThisStep">-</span></div></div>').appendTo(addSolutionSteps);
+            var options = $('#solutionStep0').html();
+            $('#SolutionStep' + solutionSteps).html(options);
+            solutionSteps++;
+            return false;
+    });
         
-        $('#addNextStep').on('click', function() {
-                var parent = $('#step_' + solutionSteps-1);
-                $('<div class="input-group"><select id="SolutionStep' + solutionSteps + '" name="SolutionStep' + solutionSteps + '" class="form-control"></select><span class="input-group-addon"><select id="CalculationLevel' + solutionSteps + '" name="CalculationLevel' + solutionSteps + '"><option value="1">Level 1</option><option value="2">Level 2</option><option value="3">Level 3</option></select></span><span class="input-group-addon"><select id="AnalysisLevel0" name="AnalysisLevel' + solutionSteps + '"><option value="1">YES</option><option value="0">NO</option></select></span><span class="input-group-addon btn btn-primary" id="removeThisStep">-</span></div>').appendTo(addSolutionSteps);
-                SolutionSteps++;
-                return false;
-        });
+    //Add new formula used in the solution
+    var addSolutionFormulae = $('#formulaeContainer');
+    var solutionFormulae = $('#formulaeContainer div').size();
+    
+    $('#addNextFormula').on('click', function() {
+            var parent = $('#step_' + solutionFormulae-1);
+            $('<div class="row"><div class="input-group"><select id="Formula' + solutionFormulae + '" name="Formula' + solutionFormulae + '" class="form-control"></select><span class="input-group-addon btn btn-danger" id="removeThisFormula">-</span></div></div>').appendTo(addSolutionFormulae);
+            var options = $('#solutionFormula0').html();
+            $('#Formula' + solutionFormulae).html(options);
+            solutionFormulae++;
+            return false;
+    });
+       
+    //Add new subtopic referenced in the question
+    var addSubTopic = $('#SubTopicContainer');
+    var subtopics = $('#SubTopicContainer div').size();
+    
+    $('#addNextSubTopic').on('click', function() {
+            var parent = $('#step_' + subtopics-1);
+            $('<div class="row"><div class="input-group"><select id="questionSubTopic' + subtopics + '" name="questionSubTopic' + subtopics + '" class="form-control"></select><span class="input-group-addon btn btn-danger" id="removeThisSubTopic">-</span></div></div>').appendTo(addSubTopic);
+            subtopics++;
+            return false;
+    });
         
-        var addSolutionFormulae = $('#formulaeContainer');
-        var solutionFormulae = $('#formulaeContainer div').size();
         
-        $('#addNextFormula').on('click', function() {
-                var parent = $('#step_' + solutionFormulae-1);
-                $('<div class="input-group"><select id="Formula' + solutionFormulae + '" name="Formula' + solutionFormulae + '" class="form-control"></select><span class="input-group-addon btn btn-primary" id="removeThisFormula">-</span></div>').appendTo(addSolutionFormulae);
-                SolutionFormulae++;
-                return false;
-        });
-        
-        var addSubTopic = $('#SubTopicContainer');
-        var subtopics = $('#SubTopicContainer div').size();
-        
-        $('#addNextSubTopic').on('click', function() {
-                var parent = $('#step_' + subtopics-1);
-                $('<div class="input-group"><select id="questionSubTopic' + subtopics + '" name="questionSubTopic' + subtopics + '" class="form-control"></select><span class="input-group-addon btn btn-primary" id="removeThisSubTopic">-</span></div>').appendTo(addSubTopic);
-                subtopics++;
-                return false;
-        });
-        
-        $('#removeThisProcess').on('click', function() { 
-                if( i > 1 ) {
-                        $(this).parents('div').remove();
-                        i--;
-                }
-                return false;
-        });
 
         $('#questionText').on('change keyup paste focus', function(){
           ltxClear();
@@ -174,7 +181,7 @@ $(function() {
 <body>
 
 <div class="container">
-  <form class="form-horizontal">
+  <form class="form-horizontal" >
 <fieldset>
 
 <!-- Form Name -->
@@ -185,16 +192,16 @@ $(function() {
 		<!-- Select The topic of the question -->
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="questionTopic">Topic</label>
-		  <div class="col-md-10">
-		    <select id="questionTopic" name="questionTopic" class="form-control">
-		    <%
-		    	for(String val : (ArrayList<String>)request.getAttribute("topics")){
-			%>
-			<option value="<%=val %>"><%=val %></option>
-			<%
-				}
-			%>
-		    </select>
+		  <div class="col-md-10" id="topicContainer">
+				    <select id="questionTopic" name="questionTopic" class="form-control">
+				    <%
+				    	for(String val : (ArrayList<String>)request.getAttribute("topics")){
+					%>
+					<option value="<%=val %>"><%=val %></option>
+					<%
+						}
+					%>
+				    </select>
 		  </div>
 		</div>
 	
@@ -202,11 +209,12 @@ $(function() {
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="questionsubTopic">Sub Topic</label>
 		  <div class="col-md-10" id="SubTopicContainer">
-			  <div class="input-group"> 
-			    <select id="questionSubTopic0" name="questionSubTopic0" class="form-control">
-			    </select>
-			    <span class="input-group-addon btn btn-primary" id="addNextSubTopic">+</span>
-				<span class="input-group-addon btn btn-primary" id="removeThisSubTopic">-</span>
+		  	  <div class="row">
+				  <div class="input-group"> 
+				    <select id="questionSubTopic0" name="questionSubTopic0" class="form-control">
+				    </select>
+				    <span class="input-group-addon btn btn-primary" id="addNextSubTopic">+</span>
+				  </div>
 			  </div>
 		  </div>
 		</div>
@@ -214,8 +222,12 @@ $(function() {
 		<!-- Textarea for the actual question -->
 		<div class="form-group" name=question>
 		  <label class="col-md-2 control-label" for="questionText">Question</label>
-		  <div class="col-md-10">                     
-		    <textarea class="form-control" id="questionText" name="questionText" cols=100 rows=10>type question text here </textarea>
+		  <div class="col-md-10" id="questionContainer"> 
+		  	<div class="row">
+				<div class="input-group">                     
+		    		<textarea class="form-control" id="questionText" name="questionText" cols=100 rows=10>type question text here </textarea>
+		    	</div>
+		    </div>
 		  </div>
 		</div>
 	
@@ -256,8 +268,8 @@ $(function() {
 		<!-- Comma seperated question tags for searching the database-->
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="questionTags">Question tags</label>  
-		  <div class="col-md-10">
-		  <input id="questionTags" name="questionTags" type="text" placeholder="comma separated tags" class="form-control input-md" required="">
+		  <div class="col-md-10" id="questiontagsContainer">
+		  			<input id="questionTags" name="questionTags" type="text" placeholder="comma separated tags" class="form-control input-md">
 		  </div>
 		</div>
 	
@@ -333,16 +345,17 @@ $(function() {
 			</div>
 		</div>
 	
-		<!-- Solution steps -->
+		<!-- Solution procedure -->
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="Solution">Solution</label>
 		  <div class="col-md-10" id="solutionContainer">
+		  <div class="row">
 		  	<div class="input-group">                     
-			    <input id="SolutionStep0" name="SolutionStep0" class="form-control" type="text" placeholder="step description"/>
+			    <input id="SolutionProcessHead0" name="SolutionProcessHead0" class="form-control" type="text" placeholder="step description"/>
 			    <span class="input-group-addon btn btn-primary" id="addNextProcess">+</span>
-			    <span class="input-group-addon btn btn-primary" id="removeThisProcess">-</span>
 			</div>
-		    <textarea id="SolutionStep0" name="SolutionStep0" class="form-control" type="text" placeholder="steps involved in the solution" cols=100 rows=5></textarea>
+		    <textarea id="SolutionProcessDetails0" name="SolutionProcessDetails0" class="form-control" type="text" placeholder="steps involved in the solution" cols=100 rows=5></textarea>
+		  </div>
 		  </div>
 		</div>
 		
@@ -350,8 +363,9 @@ $(function() {
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="Solution">Steps involved</label>
 		  <div class="col-md-10" id="stepsContainer">
+		  <div class="row">
 		  	<div class="input-group">                     
-			    <select id="Step0" name="Step0" class="form-control">
+			    <select id="solutionStep0" name="solutionStep0" class="form-control">
 			    </select>
 			    <span class="input-group-addon">
 	                    <select id="CalculationLevel0" name="CalculationLevel0">
@@ -367,8 +381,8 @@ $(function() {
 			    		</select>
 	            </span>
 			    <span class="input-group-addon btn btn-primary" id="addNextStep">+</span>
-			    <span class="input-group-addon btn btn-primary" id="removeThisStep">-</span>
 			</div>
+		  </div>
 		  </div>
 		</div>
 		
@@ -376,21 +390,22 @@ $(function() {
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="Solution">Formulae used</label>
 		  <div class="col-md-10" id="formulaeContainer">
+		  <div class="row">
 		  	<div class="input-group">                     
-			    <select id="Formula0" name="Formula0" class="form-control">
-			    </select>
+			    <select id="solutionFormula0" name="solutionFormula0" class="form-control"></select>
 			    <span class="input-group-addon btn btn-primary" id="addNextFormula">+</span>
-			    <span class="input-group-addon btn btn-primary" id="removeThisFormula">-</span>
 			</div>
+		  </div>
 		  </div>
 		</div>
 		<!-- Button (Double) -->
+		
 		<div class="form-group">
 		  <label class="col-md-4 control-label" for="questionSubmit"></label>
 		  <div class="col-md-8">
 		  	<button id="questionPreview" name="questionPreview" class="btn btn-primary" onclick="javascript:preview('questionText')">Preview</button>
-		    <button id="questionSubmit" name="questionSubmit" class="btn btn-success">submit</button>
-		    <button id="cancel" name="cancel" class="btn btn-danger">Cancel</button>
+		    <button id="questionSubmit" name="questionSubmit" class="btn btn-success" onclick="javascript:submitToDatabase();">submit</button>
+		    <button id="cancel" name="cancel" class="btn btn-warning">Cancel</button>
 		  </div>
 		</div>
 	</div>
@@ -516,31 +531,101 @@ $(function() {
      			    el.value = serverResponse[i];
      			    subtopicsDropdown.appendChild(el);
      			}
+     			jQuery.ajax({
+     	     		type:"get",
+     	     		dataType:"text",
+     	     		url:"getSteps",
+     	     		data:{topic:topicval},
+     	     		success: function(responseText) { 
+     	     			alert(responseText);
+     	     			var serverResponse = responseText.split("#");
+     	     			var subtopicsDropdown = document.getElementById("solutionStep0");
+     	     			for(var i=0;i<serverResponse.length; i++){
+     	     				var el = document.createElement("option");
+     	     			    el.textContent = serverResponse[i];
+     	     			    el.value = serverResponse[i];
+     	     			    subtopicsDropdown.appendChild(el);
+     	     			}
+     	     			jQuery.ajax({
+     	     	     		type:"get",
+     	     	     		dataType:"text",
+     	     	     		url:"getFormulae",
+     	     	     		data:{topic:topicval},
+     	     	     		success: function(responseText) { 
+     	     	     			alert(responseText);
+     	     	     			var serverResponse = responseText.split("#");
+     	     	     			var subtopicsDropdown = document.getElementById("solutionFormula0");
+     	     	     			for(var i=0;i<serverResponse.length; i++){
+     	     	     				var el = document.createElement("option");
+     	     	     			    el.textContent = serverResponse[i];
+     	     	     			    el.value = serverResponse[i];
+     	     	     			    subtopicsDropdown.appendChild(el);
+     	     	     			}
+     	     	             }
+     	     	     	});
+     	             }
+     	     	});
              }
      	});
   });
   
-  $('#questionSubTopic').click(function(){
-	  var topicval = $('#questionTopic').val();
-	  var subtopicval = $('#questionSubTopic').val();
-	  //Get the list of subtopics
-	  jQuery.ajax({
-     		type:"get",
-     		dataType:"text",
-     		url:"getSteps",
-     		data:{topic:topicval,subtopic:subtopicval},
-     		success: function(responseText) { 
-     			var serverResponse = responseText.split("#");
-     			var subtopicsDropdown = document.getElementById("Step0");
-     			for(var i=0;i<serverResponse.length; i++){
-     				var el = document.createElement("option");
-     			    el.textContent = serverResponse[i];
-     			    el.value = serverResponse[i];
-     			    subtopicsDropdown.appendChild(el);
-     			}
-             }
-     	});
-  });
+ 
+  
+  function submitToDatabase(){
+	  //Fetch the submitable details
+	  //Fetch the topic of the question
+	  var topic = $('#questionTopic').val();
+	  
+	  //Fetch the subtopics referenced in the question
+	  var subtopics;
+	  $('#SubTopicContainer div div').children('select').each(function(){
+		  subtopics = $(this).val() + '|';
+	  });
+	  
+	  //Fetch the question text
+	  var question = $('#questionText').val();
+	  
+	  //Fetch the question tags
+	  var questionTags = $('#questionTags').val();
+	  
+	  //Fetch all the options provided
+	  var option1 = $('#Option1CheckBox').val();
+	  var option2 = $('#Option2CheckBox').val();
+	  var option3 = $('#Option3CheckBox').val();
+	  var option4 = $('#Option4CheckBox').val();
+	  
+	  //Fetch the procedure involved
+	  var procedure;
+	  $('#solutionContainer div div').each(function(){
+		  procedure += $(this).children('input').val();
+		  procedure += '[';
+		  procedure += $(this).children('textarea').val();
+		  procedure += ']::';
+	  });
+	  
+	  //Fetch all the steps and analysis level involved
+	  var steps;
+	  $('#solutionContainer div div').each(function(){
+	  	$(this).children('select').each(function(){
+	  		steps += $(this).val() + '|';
+	  	});
+	  	steps += "::";
+	  });
+	  
+	  //Fetch all the formulae used
+	  var formulae;
+	  $('#formulaeContainer div div').each(function(){
+		  formulae += $(this).children('select').val() + '|';
+	  });
+	  
+	  alert("topic :: " + topic);
+	  alert("subtopics :: " + subtopics);
+	  alert("question :: " + question);
+	  alert("questionTags :: " + questionTags);
+	  alert("procedure :: " + procedure);
+	  alert("steps :: " + steps);
+	  alert("formulae :: " + formulae);
+  }
 </script>
 <script id="template-upload" type="text/x-tmpl">
 {% for (var i=0, file; file=o.files[i]; i++) { %}
@@ -573,48 +658,6 @@ $(function() {
     </tr>
 {% } %}
 </script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
-<script src="js/vendor/jquery.ui.widget.js"></script>
-<!-- The Templates plugin is included to render the upload/download listings -->
-<script src="//blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
-<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
-<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
-<!-- The Canvas to Blob plugin is included for image resizing functionality -->
-<script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
-<!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<!-- blueimp Gallery script -->
-<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
-<script src="js/jquery.iframe-transport.js"></script>
-<!-- The basic File Upload plugin -->
-<script src="js/jquery.fileupload.js"></script>
-<!-- The File Upload processing plugin -->
-<script src="js/jquery.fileupload-process.js"></script>
-<!-- The File Upload image preview & resize plugin -->
-<script src="js/jquery.fileupload-image.js"></script>
-<!-- The File Upload audio preview plugin -->
-<script src="js/jquery.fileupload-audio.js"></script>
-<!-- The File Upload video preview plugin -->
-<script src="js/jquery.fileupload-video.js"></script>
-<!-- The File Upload validation plugin -->
-<script src="js/jquery.fileupload-validate.js"></script>
-<!-- The File Upload user interface plugin -->
-<script src="js/jquery.fileupload-ui.js"></script>
-<!-- The main application script -->
-<script src="js/main.js"></script>
-<!-- The XDomainRequest Transport is included for cross-domain file deletion for IE 8 and IE 9 -->
-<!--[if (gte IE 8)&(lt IE 10)]>
-<script src="js/cors/jquery.xdr-transport.js"></script>
-<![endif]-->
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-41071247-1', 'blueimp.github.io');
-ga('send', 'pageview');
-</script>
+
 </html>
 

@@ -12,16 +12,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class getSteps
+ * Servlet implementation class getFormulae
  */
-@WebServlet("/getSteps")
-public class getSteps extends HttpServlet {
+@WebServlet("/getFormulae")
+public class getFormulae extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public getSteps() {
+    public getFormulae() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,18 +35,18 @@ public class getSteps extends HttpServlet {
 		try {
 			JDBCConnection database = new JDBCConnection();
 			Statement stmt = database.connection.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT * FROM steps WHERE topic='" + topic + "'");
-			String stepsList = "";
+			ResultSet rs = stmt.executeQuery("SELECT * FROM formulae WHERE topic='" + topic + "'");
+			String formulaList = "";
 			while(rs.next()){
-				stepsList += rs.getString("step") + "#";
+				formulaList += rs.getString("formula") + "#";
 			}
-			if(stepsList.endsWith("#")){
-				stepsList = stepsList.substring(0, stepsList.length()-1);
+			if(formulaList.endsWith("#")){
+				formulaList = formulaList.substring(0, formulaList.length()-1);
 			}
-			System.out.println("The steps list retireved is " +  stepsList);
+			System.out.println("The steps list retireved is " +  formulaList);
 			response.setContentType("text/plain");  
 			response.setCharacterEncoding("UTF-8"); 
-			response.getWriter().write(stepsList);
+			response.getWriter().write(formulaList);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
