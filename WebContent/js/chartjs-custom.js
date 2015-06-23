@@ -25,15 +25,8 @@ $(document).ready(function() {
 
     ];
     var lineChartData = {
-        labels : ["","","","","","",""],
+        labels : ["Algebra-I","Algebra-II","Algebra-III","Algebra-IV","Algebra-V","Algebra-VI","Algebra-VII"],
         datasets : [
-            {
-                fillColor : "rgba(220,220,220,0.5)",
-                strokeColor : "rgba(220,220,220,1)",
-                pointColor : "rgba(220,220,220,1)",
-                pointStrokeColor : "#fff",
-                data : [65,59,90,81,56,55,40]
-            },
             {
                 fillColor : "rgba(151,187,205,0.5)",
                 strokeColor : "rgba(151,187,205,1)",
@@ -60,13 +53,8 @@ $(document).ready(function() {
 
     ];
     var barChartData = {
-        labels : ["January","February","March","April","May","June","July"],
+        labels : ["Algebra","Polynomials","Geometry","Calculus","Cartesian","Trigonometry","Number theory"],
         datasets : [
-            {
-                fillColor : "rgba(220,220,220,0.5)",
-                strokeColor : "rgba(220,220,220,1)",
-                data : [65,59,90,81,56,55,40]
-            },
             {
                 fillColor : "rgba(151,187,205,0.5)",
                 strokeColor : "rgba(151,187,205,1)",
@@ -121,12 +109,8 @@ $(document).ready(function() {
         ]
 
     };
-    new Chart(document.getElementById("doughnut").getContext("2d")).Doughnut(doughnutData);
     new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);
-    new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData);
-    new Chart(document.getElementById("polarArea").getContext("2d")).PolarArea(chartData);
     new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
-    new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
 
 
 });

@@ -332,10 +332,10 @@
                           <span class="menu-arrow arrow_carrot-down"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="">Mathematics</a></li>                          
-                          <li><a class="" href="">Physics</a></li>
-                          <li><a class="" href="">Chemistry</a></li>                          
-                          <li><a class="" href="">English</a></li>
+                          <li><a class="" href="CoursePage.jsp">Mathematics</a></li>                          
+                          <li><a class="" href="CoursePage.jsp">Physics</a></li>
+                          <li><a class="" href="CoursePage.jsp">Chemistry</a></li>                          
+                          <li><a class="" href="CoursePage.jsp">English</a></li>
                       </ul>
                   </li>       
                     
@@ -390,7 +390,7 @@
 					<div class="info-box blue-bg">
 						<i class="fa fa-thumbs-o-up"></i>
 						<!-- <div class="count">6.674</div> -->
-						<div class="title">Mathematics</div>						
+						<div class="title"><a href="CoursePage.jsp">Mathematics</a></div>						
 					</div><!--/.info-box-->			
 				</div><!--/.col-->
 				
@@ -398,7 +398,7 @@
 					<div class="info-box brown-bg">
 						<i class="fa fa-thumbs-o-down"></i>
 						<!-- <div class="count">7.538</div> -->
-						<div class="title">Physics</div>						
+						<div class="title"><a href="CoursePage.jsp">Physics</a></div>						
 					</div><!--/.info-box-->			
 				</div><!--/.col-->	
 				
@@ -406,7 +406,7 @@
 					<div class="info-box dark-bg">
 						<i class="fa fa-thumbs-o-up"></i>
 						<!-- <div class="count">4.362</div> -->
-						<div class="title">Chemistry</div>						
+						<div class="title"><a href="CoursePage.jsp">Chemistry</a></div>						
 					</div><!--/.info-box-->			
 				</div><!--/.col-->
 				
@@ -414,7 +414,7 @@
 					<div class="info-box green-bg">
 						<i class="fa fa-thumbs-o-up"></i>
 						<!-- <div class="count">1.426</div> -->
-						<div class="title">English</div>						
+						<div class="title"><a href="CoursePage.jsp">English</a></div>						
 					</div><!--/.info-box-->			
 				</div><!--/.col-->
 				

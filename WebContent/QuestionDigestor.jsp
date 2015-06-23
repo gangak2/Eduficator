@@ -130,6 +130,8 @@ $(function() {
     $('#addNextSubTopic').on('click', function() {
             var parent = $('#step_' + subtopics-1);
             $('<div class="row"><div class="input-group"><select id="questionSubTopic' + subtopics + '" name="questionSubTopic' + subtopics + '" class="form-control"></select><span class="input-group-addon btn btn-danger" id="removeThisSubTopic">-</span></div></div>').appendTo(addSubTopic);
+            var options = $('#questionSubTopic0').html();
+            $('#questionSubTopic' + subtopics).html(options);
             subtopics++;
             return false;
     });
@@ -569,18 +571,58 @@ $(function() {
      	});
   });
   
- 
+ function fetchAllSubTopics(){
+	 var subtopics = [];
+	  $('#SubTopicContainer div div').children('select').each(function(){
+		  subtopics.push($(this).val());
+	  });
+	  
+	 return subtopics.join("|");
+ }
   
+ function fetchAllProcesses(){
+	 var heads = [];
+	 $('#solutionContainer div div input').each(function(){
+		  heads.push($(this).val());
+	  });
+	 var descs = [];
+	 $('#solutionContainer div textarea').each(function(){
+		  descs.push($(this).val());
+	  });
+	 var procedure = [];
+	 for(var i=0;i<heads.length;i++){
+		 procedure.push(heads[i]+":"+descs[i]);
+	 }
+	 return procedure.join("|");
+ }
+ 
+ function fetchAllSteps(){
+	 var steps = [];
+	 $('#stepsContainer div div').each(function(){
+		 	var stepdetails = [];
+		  	$(this).children('select').each(function(){
+		  		stepdetails.push($(this).val());
+		  	});
+		  	steps.push(stepdetails.join(":"));
+		  });
+	 return steps.join("|");
+ }
+ 
+ function fetchAllFormulae(){
+	 var formulae = [];
+	 $('#formulaeContainer div div').each(function(){
+		  formulae.push($(this).children('select').val());
+	  });
+	 return formulae.join("|");
+ }
+ 
   function submitToDatabase(){
 	  //Fetch the submitable details
 	  //Fetch the topic of the question
 	  var topic = $('#questionTopic').val();
 	  
 	  //Fetch the subtopics referenced in the question
-	  var subtopics;
-	  $('#SubTopicContainer div div').children('select').each(function(){
-		  subtopics = $(this).val() + '|';
-	  });
+	  var subTopicList = fetchAllSubTopics();
 	  
 	  //Fetch the question text
 	  var question = $('#questionText').val();
@@ -593,38 +635,23 @@ $(function() {
 	  var option2 = $('#Option2CheckBox').val();
 	  var option3 = $('#Option3CheckBox').val();
 	  var option4 = $('#Option4CheckBox').val();
+	  var options = option1 + "|" + option2 + "|" + option3 + "|" + option4;
 	  
 	  //Fetch the procedure involved
-	  var procedure;
-	  $('#solutionContainer div div').each(function(){
-		  procedure += $(this).children('input').val();
-		  procedure += '[';
-		  procedure += $(this).children('textarea').val();
-		  procedure += ']::';
-	  });
+	  var procedure = fetchAllProcesses();
 	  
 	  //Fetch all the steps and analysis level involved
-	  var steps;
-	  $('#solutionContainer div div').each(function(){
-	  	$(this).children('select').each(function(){
-	  		steps += $(this).val() + '|';
-	  	});
-	  	steps += "::";
-	  });
+	  var steps = fetchAllSteps();
 	  
 	  //Fetch all the formulae used
-	  var formulae;
-	  $('#formulaeContainer div div').each(function(){
-		  formulae += $(this).children('select').val() + '|';
-	  });
+	  var formulae = fetchAllFormulae();
 	  
-	  alert("topic :: " + topic);
-	  alert("subtopics :: " + subtopics);
-	  alert("question :: " + question);
-	  alert("questionTags :: " + questionTags);
-	  alert("procedure :: " + procedure);
-	  alert("steps :: " + steps);
-	  alert("formulae :: " + formulae);
+	  jQuery.ajax({
+   		type:"get",
+   		dataType:"text",
+   		url:"importQuestion",
+   		data:{_topic:topic,_subTopicList:subTopicList,_question:question,_questionTags:questionTags,_options:options,_procedure:procedure,_steps:steps,_formulae:formulae}
+	  });
   }
 </script>
 <script id="template-upload" type="text/x-tmpl">
