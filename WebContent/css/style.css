@@ -258,7 +258,7 @@ table tr th { color: #688a7e;}
 /*sidebar navigation*/
 
 #sidebar {
-    width: 180px;
+    width: 20%;
     height: 100%;
     position: fixed;
     background: #394a59;
@@ -488,7 +488,7 @@ ul.sidebar-menu li.active a i {
 /*main content*/
 
 #main-content {
-    margin-left: 180px;
+    margin-left: 20%;
 }
 
 .header, .footer {
@@ -917,10 +917,10 @@ div[data-role="editor-toolbar"] {
 }
 .info-box i {
   display: block;
-  height: 100px;
+  height: 20%;
   font-size: 60px;
-  line-height: 100px;
-  width: 100px;
+  line-height: 80px;
+  width: 20%;
   float: left;
   text-align: center;
   margin-right: 20px;
@@ -933,7 +933,7 @@ div[data-role="editor-toolbar"] {
   font-weight: 700;
 }
 .info-box .title {
-  font-size: 12px;
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: 600;
 }

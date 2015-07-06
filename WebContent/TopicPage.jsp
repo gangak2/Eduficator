@@ -35,9 +35,6 @@
     <style>
     .highlight{background-color:#7fcce5 !important;}
     .accordiantable{background-color:#DCDCDC !important;}
-    .weak{background-color:#FFE6E6 !important;}
-    .moderate{background-color:#FFFFFF !important;}
-    .proficient{background-color:#EBFAEB !important;}
     </style>
   </head>
 
@@ -272,7 +269,7 @@
                             <span class="profile-ava">
                                 <img alt="" src="img/avatar1_small.jpg">
                             </span>
-                            <span class="username">Bruce Wayne</span>
+                            <span class="username">Jenifer Smith</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
@@ -370,7 +367,7 @@
           <section class="wrapper">
 		  <div class="row">
 				<div class="col-lg-12">
-					<h3 class="page-header"><i class="fa fa-table"></i> Course</h3>
+					<h3 class="page-header"><i class="fa fa-table"></i> Topic</h3>
 				</div>
 			</div>
               <!-- page start-->
@@ -383,7 +380,7 @@
 				      </li>
 				      <li>
 				      	<a href="#topics" role="tab" data-toggle="tab">
-				          <i class="fa fa-list"></i> Topics
+				          <i class="fa fa-list"></i> SubTopics
 				          </a>
 				      </li>
 				      <li>
@@ -438,60 +435,21 @@
       							<table class="table table-advance" id="courseProgress">
                            <tbody>
                               <tr>
-                                 <th>Topic</th>
-                                 <th>Proficiency</th>
+                                 <th><i class="icon_profile"></i> Topic</th>
+                                 <th><i class="icon_mail_alt"></i> Proficiency</th>
                               </tr>
-                              
-                              <tr data-toggle="collapse" data-target="#001" class="accordion-toggle collapsed proficient">
-                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Algebra</a>
+                              <tr>
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Area of Triangle</a>
                                  	<div class="progress" style="width: 50%;">
-									    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
-									      90% Complete
+									    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+									      75% Complete
 									    </div>
 									  </div>
                                  </td>
                                  <td style="font-size: 40px;">92%</td>
                               </tr>
-                              
                               <tr>
-								<td colspan="4" class="hiddentablerow">
-								<div class="accordian-body collapse" id="001">
-								    <table class="table accordiantable">
-								        <thead>
-								        <th class="">Sub Topic</th>
-								        <th class="">Progress</th>
-								        <th class="">Proficiency</th>
-								        <th class="">Action</th>
-								        </thead>
-								        <tbody>
-								        <tr>
-								        	<td>Algebra 1.1</td>
-								            <td>100</td>
-								            <td>6.2</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        <tr>
-								        	<td>Algebra 1.2</td>
-								            <td>100</td>
-								            <td>7.9</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        </tbody>
-								    </table>
-								</div> 
-								</td>
-							</tr>
-							
-                              <tr data-toggle="collapse" data-target="#002" class="accordion-toggle collapsed weak">
-                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Polynomials</a>
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Area of Square</a>
                                  	<div class="progress" style="width: 50%;">
 									    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
 									      80% Complete
@@ -500,46 +458,8 @@
                                  </td>
                                  <td style="font-size: 40px;">24%</td>
                               </tr>
-                              
                               <tr>
-								<td colspan="4" class="hiddentablerow">
-								<div class="accordian-body collapse" id="002">
-								    <table class="table accordiantable">
-								        <thead>
-								        <th class="">Sub Topic</th>
-								        <th class="">Progress</th>
-								        <th class="">Proficiency</th>
-								        <th class="">Action</th>
-								        </thead>
-								        <tbody>
-								        <tr>
-								        	<td>Polynomials 1.1</td>
-								            <td>100</td>
-								            <td>6.2</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        <tr>
-								        	<td>Polynomials 1.2</td>
-								            <td>100</td>
-								            <td>7.9</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        </tbody>
-								    </table>
-								</div> 
-								</td>
-							</tr>
-							
-                              <tr data-toggle="collapse" data-target="#003" class="accordion-toggle collapsed proficient">
-                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Geometry</a>
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Area of Circle</a>
                                  	<div class="progress" style="width: 50%;">
 									    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
 									      100% Complete
@@ -548,46 +468,8 @@
                                  </td>
                                  <td style="font-size: 40px;">84%</td>
                               </tr>
-                              
                               <tr>
-								<td colspan="4" class="hiddentablerow">
-								<div class="accordian-body collapse" id="003">
-								    <table class="table accordiantable">
-								        <thead>
-								        <th class="">Sub Topic</th>
-								        <th class="">Progress</th>
-								        <th class="">Proficiency</th>
-								        <th class="">Action</th>
-								        </thead>
-								        <tbody>
-								        <tr>
-								        	<td>Geometry 1.1</td>
-								            <td>100</td>
-								            <td>6.2</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        <tr>
-								        	<td>Geometry 1.2</td>
-								            <td>100</td>
-								            <td>7.9</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        </tbody>
-								    </table>
-								</div> 
-								</td>
-							</tr>
-							
-                              <tr data-toggle="collapse" data-target="#004" class="accordion-toggle collapsed moderate">
-                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Calculus</a>
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Area of Rectangle</a>
                                  	<div class="progress" style="width: 50%;">
 									    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
 									      60% Complete
@@ -596,46 +478,8 @@
                                  </td>
                                  <td style="font-size: 40px;">76%</td>
                               </tr>
-                              
                               <tr>
-								<td colspan="4" class="hiddentablerow">
-								<div class="accordian-body collapse" id="004">
-								    <table class="table accordiantable">
-								        <thead>
-								        <th class="">Sub Topic</th>
-								        <th class="">Progress</th>
-								        <th class="">Proficiency</th>
-								        <th class="">Action</th>
-								        </thead>
-								        <tbody>
-								        <tr>
-								        	<td>Calculus 1.1</td>
-								            <td>100</td>
-								            <td>6.2</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        <tr>
-								        	<td>Calculus 1.2</td>
-								            <td>100</td>
-								            <td>7.9</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        </tbody>
-								    </table>
-								</div> 
-								</td>
-							</tr>
-							
-                              <tr data-toggle="collapse" data-target="#005" class="accordion-toggle collapsed proficient">
-                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Cartesian</a>
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Area of miscelleneous figures</a>
                                  	<div class="progress" style="width: 50%;">
 									    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
 									      100% Complete
@@ -644,139 +488,6 @@
                                  </td>
                                  <td style="font-size: 40px;">91%</td>
                               </tr>
-                              
-                              <tr>
-								<td colspan="4" class="hiddentablerow">
-								<div class="accordian-body collapse" id="005">
-								    <table class="table accordiantable">
-								        <thead>
-								        <th class="">Sub Topic</th>
-								        <th class="">Progress</th>
-								        <th class="">Proficiency</th>
-								        <th class="">Action</th>
-								        </thead>
-								        <tbody>
-								        <tr>
-								        	<td>Cartesian 1.1</td>
-								            <td>100</td>
-								            <td>6.2</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        <tr>
-								        	<td>Cartesian 1.2</td>
-								            <td>100</td>
-								            <td>7.9</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        </tbody>
-								    </table>
-								</div> 
-								</td>
-							</tr>
-							
-                              <tr data-toggle="collapse" data-target="#006" class="accordion-toggle collapsed proficient">
-                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Trigonometry</a>
-                                 	<div class="progress" style="width: 50%;">
-									    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-									      100% Complete
-									    </div>
-									  </div>
-                                 </td>
-                                 <td style="font-size: 40px;">95%</td>
-                              </tr>
-                              
-                              <tr>
-								<td colspan="4" class="hiddentablerow">
-								<div class="accordian-body collapse" id="006">
-								    <table class="table accordiantable">
-								        <thead>
-								        <th class="">Sub Topic</th>
-								        <th class="">Progress</th>
-								        <th class="">Proficiency</th>
-								        <th class="">Action</th>
-								        </thead>
-								        <tbody>
-								        <tr>
-								        	<td>Trigonometry 1.1</td>
-								            <td>100</td>
-								            <td>6.2</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        <tr>
-								        	<td>Trigonometry 1.2</td>
-								            <td>100</td>
-								            <td>7.9</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        </tbody>
-								    </table>
-								</div> 
-								</td>
-							</tr>
-							
-                              <tr data-toggle="collapse" data-target="#007" class="accordion-toggle collapsed weak">
-                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Number theory</a>
-                                 	<div class="progress" style="width: 50%;">
-									    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
-									      100% Complete
-									    </div>
-									  </div>
-                                 </td>
-                                 <td style="font-size: 40px;">32%</td>
-                              </tr>
-                              
-                              <tr>
-								<td colspan="4" class="hiddentablerow">
-								<div class="accordian-body collapse" id="007">
-								    <table class="table accordiantable">
-								        <thead>
-								        <th class="">Sub Topic</th>
-								        <th class="">Progress</th>
-								        <th class="">Proficiency</th>
-								        <th class="">Action</th>
-								        </thead>
-								        <tbody>
-								        <tr>
-								        	<td>Number theory 1.1</td>
-								            <td>100</td>
-								            <td>6.2</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        <tr>
-								        	<td>Number theory 1.2</td>
-								            <td>100</td>
-								            <td>7.9</td>
-								            <td>
-			                                  <div class="btn-group">
-			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
-			                                  </div>
-			                                </td>
-								        </tr>
-								        </tbody>
-								    </table>
-								</div> 
-								</td>
-							</tr>
                             </tbody>
                         </table>
       						</div>
@@ -1035,15 +746,9 @@
     <script src="js/scripts.js"></script>
 	<script>
 	$('#courseProgress tbody tr').on('click', function(event) {
-	    $clicked_tr = $(this);
-	    $isHighlighted = $('#courseProgress tbody tr').hasClass('highlight');
-	    $isCollapsed = $clicked_tr.hasClass('collapsed');
-	    $('#courseProgress tbody tr').removeClass('highlight');
-	    $('#courseProgress tbody tr').addClass('collapsed');
-	    if(!$isHighlighted && $isCollapsed) {
-	    	$clicked_tr.addClass('highlight');
-	    	$clicked_tr.removeClass('collapsed');
-	    }
+		$('#courseProgress tbody tr').removeClass('highlight');
+		$clicked_tr = $(this);
+		$clicked_tr.addClass('highlight');
 	});
 	</script>
 

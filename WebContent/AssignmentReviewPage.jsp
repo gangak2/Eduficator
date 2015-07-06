@@ -11,7 +11,7 @@
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
     
-    <title>Test page</title>
+    <title>Assignment review page</title>
 
     <!-- Bootstrap CSS -->    
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,8 @@
     <![endif]-->
     
     <style>
-    .highlight{background-color:#7fcce5 !important;}
+    .correct{background-color:#CCFF66 !important;}
+    .wrong{background-color:#FFCC99 !important;}
     </style>
   </head>
 
@@ -314,14 +315,6 @@
 		          </li>        
               </ul>
               
-               <div class="panel panel-default">
-              	 <div class="panel-body">
-              	 	<a class="" href="CoursePage.jsp">
-                          <i class="icon_close_alt2"></i>
-                          <span>Abandon Test</span>
-                      </a>
-              	 </div>
-              </div>
              <!--  <div class="panel panel-default" data-toggle="tooltip" data-placement="top" title="There is still some time. Chill!">
 			      <div class="panel-body">
 			        <div class="lead" id="clock" align="center" style="margin:0 auto;"></div>
@@ -345,12 +338,96 @@
       <section id="main-content">
           <section class="wrapper">
 		  <div class="row">
-				<div class="col-lg-9" id="paginator">
-				</div>
-				<div class="col-lg-10">
+				<div class="col-lg-9">
 					<section class="panel">
                       <header class="panel-heading">
                           <h3>Question 1</Char>
+                      </header>
+                      <div class="row" id="questionContainer">
+                  		<div class="col-lg-12" style="padding-left: 2%;">
+                  			<p class="text-justify" style="font-size: 15px;">
+                  			Home, where I learned the truth about despair, as will you. There's a reason why this prison is the worst hell on earth... Hope. Every man who has rotted here over the centuries has looked up to the light and imagined climbing to freedom. So easy... So simple... And like shipwrecked men turning to sea water from uncontrollable thirst, many have died trying. I learned here that there can be no true despair without hope. So, as I terrorize Gotham, I will feed its people hope to poison their souls. I will let them believe they can survive so that you can watch them clambering over each other to stay in the sun. You can watch me torture an entire city and when you have truly understood the depth of your failure, we will fulfill Ra's al Ghul's destiny... We will destroy Gotham and then, when it is done and Gotham is...ashes... then you have my permission to die.
+                  			</p>
+                  		</div>
+                  		<div id="imagesHolder" class="col-lg-12">
+							<ul class="row">
+					            <li class="col-lg-2 col-md-2 col-sm-4 col-xs-3">
+					                <img class="img-responsive" src="images/1.jpg">
+					            </li>
+			          		</ul> 
+						</div>
+                  		<div class="input-group" id="optionsContainer">
+	                  		<div class="col-sm-12">
+	                  			 	<span class="input-group-addon">
+					                	A
+					              	</span>
+					                <p class="text-justify form-control correct" style="font-size: 15px;">
+		                  			Gotham needed a hero.
+		                  			</p>
+					              
+					        </div>
+					        <div class="col-sm-12">
+                  			 	<span class="input-group-addon">
+				                	B
+				              	</span>
+				                <p class="text-justify form-control" style="font-size: 15px;">
+		                  			Not everything. Not yet.
+		                  		</p>
+				              
+				        	</div>
+				        	<div class="col-sm-12">
+                  			 	<span class="input-group-addon">
+				                	C
+				              	</span>
+				                <p class="text-justify form-control wrong" style="font-size: 15px;">
+		                  			The shadows betray you, because they belong to me.
+		                  		</p>
+				              
+				        	</div>
+				        	<div class="col-sm-12 ">
+				        		<span class="input-group-addon">
+				                	D
+				              	</span>
+				                <p class="text-justify form-control" style="font-size: 15px;">
+		                  			Every Hero Has a Journey. Every Journey Has an End.
+		                  		</p>
+				              
+				        	</div>
+				        </div>
+				        </br>
+				        <div class="row" id="detailedSolutionContainer">
+				        	<section class="panel">
+		                      <header class="panel-heading">
+		                          <h3>Solution</Char>
+		                      </header>
+					        	<div class="col-lg-12" style="padding-left: 2%;">
+					        		Detailed explaination here
+					        	</div>
+					        	</section>
+				        </div>
+                  		</div>
+                    </section>
+				</div>
+				 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="info-box dark-bg" align="center" style="margin:0 auto;">
+						<div class="title"><a href="CoursePage.jsp">Time taken</a></div>
+						<div class="count" title="">71 sec</div>
+						<div class="small" title="Class average">62Sec</div>					
+					</div>
+                 </div>
+	               
+	             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="info-box dark-bg" align="center" style="margin:0 auto;">
+						<div class="title"><a href="CoursePage.jsp">Class submissions</a></div>
+						<div class="count" title="">11(19)</div>					
+					</div>
+                 </div>           
+			</div>
+					  <div class="row">
+				<div class="col-lg-9">
+					<section class="panel">
+                      <header class="panel-heading">
+                          <h3>Question 2</Char>
                       </header>
                       <div class="row" id="questionContainer">
                   		<div class="col-lg-12" style="padding-left: 2%;">
@@ -397,25 +474,40 @@
 				        		<span class="input-group-addon">
 				                	D
 				              	</span>
-				                <p class="text-justify form-control" style="font-size: 15px;">
+				                <p class="text-justify form-control correct" style="font-size: 15px;">
 		                  			Every Hero Has a Journey. Every Journey Has an End.
 		                  		</p>
 				              
 				        	</div>
 				        </div>
-				        <div class="form-group">
-						  <label class="col-md-4 control-label" for="questionSubmit"></label>
-						  <div class="col-md-8">
-						  	<button id="questionPreview" name="questionPreview" class="btn btn-primary" ><<</button>
-						    <button id="questionSubmit" name="questionSubmit" class="btn btn-default" >Mark & continue</button>
-						    <button id="cancel" name="cancel" class="btn btn-primary">>></button>
-						  </div>
-						</div>
+				        </br>
+				        <div class="row" id="detailedSolutionContainer">
+				        	<section class="panel">
+		                      <header class="panel-heading">
+		                          <h3>Solution</Char>
+		                      </header>
+					        	<div class="col-lg-12" style="padding-left: 2%;">
+					        		Detailed explaination here
+					        	</div>
+					        	</section>
+				        </div>
                   		</div>
                     </section>
 				</div>
-				<div>
-				</div>
+				 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="info-box dark-bg" align="center" style="margin:0 auto;">
+						<div class="title"><a href="CoursePage.jsp">Time taken</a></div>
+						<div class="count" title="">71 sec</div>
+						<div class="small" title="Class average">62Sec</div>					
+					</div>
+                 </div>
+	               
+	             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="info-box dark-bg" align="center" style="margin:0 auto;">
+						<div class="title"><a href="CoursePage.jsp">Class submissions</a></div>
+						<div class="count" title="">11(19)</div>					
+					</div>
+                 </div>           
 			</div>
          </section>
   </section>
@@ -443,18 +535,7 @@
 
   var clock = $('#clock');
   
-  $('#paginator').bootpag({
-	  total: 50,
-	  page: 1,
-	  maxVisible: 15
-  });
   
-  $('#optionsContainer div p').on('click', function(event) {
-		$('#optionsContainer div p').removeClass('highlight');
-		$clicked_tr = $(this);
-		if($clicked_tr.hasClass('highlight'))	$clicked_tr.removeClass('highlight');
-		else $clicked_tr.addClass('highlight');
-	});
   
   $('#clock').countdown(gethourFromNow(), function(event) {
     $(this).html(event.strftime('%H:%M:%S'));

@@ -30,9 +30,9 @@ public class importQuestion extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String topic = request.getParameter("_topic");
+		String topic = (String)request.getParameter("_topic").replaceAll("\'", "\\\'");
 		String subtopics = request.getParameter("_subTopicList");
-		String question = request.getParameter("_question");
+		String question = (String)request.getParameter("_question").replaceAll("\\'", "\\\\'");
 		String questiontags = request.getParameter("_questionTags");
 		String options = request.getParameter("_options");
 		String procedure = request.getParameter("_procedure");
