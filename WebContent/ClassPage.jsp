@@ -11,7 +11,7 @@
     <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
     <link rel="shortcut icon" href="img/favicon.png">
     
-    <title>Assignment review page</title>
+    <title>Class page</title>
 
     <!-- Bootstrap CSS -->    
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -335,94 +335,369 @@
 		  <div class="row" id="question1">
 				<div class="col-lg-12">
 					<section class="panel">
-                      <header class="panel-heading">
-                          <h3>Question 1</Char>
-                      </header>
                       <ul class="nav nav-tabs" role="tablist">
 				      <li class="active">
-				          <a href="#question1Container" role="tab" data-toggle="tab">
-				              <icon class="fa fa-question"></icon> Question
+				          <a href="#topics" role="tab" data-toggle="tab">
+				              <icon class="fa fa-list"></icon> Topics
 				          </a>
 				      </li>
-				      <li><a href="#detailedSolution1Container" role="tab" data-toggle="tab">
-				          <i class="fa fa-eye"></i> Solution
-				          </a>
-				      </li>
-				      <li>
-				          <a href="#suggestedSolution1Container" role="tab" data-toggle="tab">
-				              <i class="fa fa-comments-o"></i> Discussion
-				          </a>
-				      </li>
-				      <li>
-				          <a href="#question1StatisticsContainer" role="tab" data-toggle="tab">
-				              <i class="fa fa-tachometer"></i> Statistics
+				      <li><a href="#students" role="tab" data-toggle="tab">
+				          <i class="fa fa-users"></i> Students
 				          </a>
 				      </li>
 				    </ul>
 				    
 				    <div class="tab-content">
-                      <div class="row tab-pane fade active in" id="question1Container">
-                  		<div class="col-lg-12" style="padding-left: 2%;">
-                  			<p class="text-justify" style="font-size: 15px;">
-                  			Home, where I learned the truth about despair, as will you. There's a reason why this prison is the worst hell on earth... Hope. Every man who has rotted here over the centuries has looked up to the light and imagined climbing to freedom. So easy... So simple... And like shipwrecked men turning to sea water from uncontrollable thirst, many have died trying. I learned here that there can be no true despair without hope. So, as I terrorize Gotham, I will feed its people hope to poison their souls. I will let them believe they can survive so that you can watch them clambering over each other to stay in the sun. You can watch me torture an entire city and when you have truly understood the depth of your failure, we will fulfill Ra's al Ghul's destiny... We will destroy Gotham and then, when it is done and Gotham is...ashes... then you have my permission to die.
-                  			</p>
-                  		</div>
-                  		<div id="imagesHolder" class="col-lg-12">
-							<ul class="row">
-					            <li class="col-lg-2 col-md-2 col-sm-4 col-xs-3">
-					                <img class="img-responsive" src="images/1.jpg">
-					            </li>
-			          		</ul> 
-						</div>
-                  		<div class="input-group" id="optionsContainer">
-	                  		<div class="col-sm-12">
-	                  			 	<span class="input-group-addon">
-					                	A
-					              	</span>
-					                <p class="text-justify form-control correct" style="font-size: 15px;">
-		                  			Gotham needed a hero.
-		                  			</p>
-					              
-					        </div>
-					        <div class="col-sm-12">
-                  			 	<span class="input-group-addon">
-				                	B
-				              	</span>
-				                <p class="text-justify form-control" style="font-size: 15px;">
-		                  			Not everything. Not yet.
-		                  		</p>
-				              
-				        	</div>
-				        	<div class="col-sm-12">
-                  			 	<span class="input-group-addon">
-				                	C
-				              	</span>
-				                <p class="text-justify form-control wrong" style="font-size: 15px;">
-		                  			The shadows betray you, because they belong to me.
-		                  		</p>
-				              
-				        	</div>
-				        	<div class="col-sm-12 ">
-				        		<span class="input-group-addon">
-				                	D
-				              	</span>
-				                <p class="text-justify form-control" style="font-size: 15px;">
-		                  			Every Hero Has a Journey. Every Journey Has an End.
-		                  		</p>
-				              
-				        	</div>
-				        </div>
-                  	</div>
-                  	<div class="row tab-pane fade" id="detailedSolution1Container">
-				        	<section class="panel">
-		                      <div class="col-lg-12" style="padding-left: 2%;">
-					        		<h3>Computing the area of rectangle</h3>
-					        		<p>Detailed explaination of finding the area of rectangle</p>
-					        	</div>
-					        	</section>
-				        </div>
+				    	<div class="tab-pane fade row active in" id="topics">
+      						<div class="col-lg-12 panel">
+      							<table class="table table-advance" id="courseProgress">
+                           <tbody>
+                              <tr>
+                                 <th>Topic</th>
+                                 <th>Proficiency</th>
+                              </tr>
+                              
+                              <tr data-toggle="collapse" data-target="#001" class="accordion-toggle collapsed proficient">
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Algebra</a>
+                                 	<div class="progress" style="width: 50%;">
+									    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+									      90% Complete
+									    </div>
+									  </div>
+                                 </td>
+                                 <td style="font-size: 40px;">92%</td>
+                              </tr>
+                              
+                              <tr>
+								<td colspan="4" class="hiddentablerow">
+								<div class="accordian-body collapse" id="001">
+								    <table class="table accordiantable">
+								        <thead>
+								        <th class="">Sub Topic</th>
+								        <th class="">Progress</th>
+								        <th class="">Proficiency</th>
+								        <th class="">Action</th>
+								        </thead>
+								        <tbody>
+								        <tr>
+								        	<td>Algebra 1.1</td>
+								            <td>100</td>
+								            <td>6.2</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        <tr>
+								        	<td>Algebra 1.2</td>
+								            <td>100</td>
+								            <td>7.9</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        </tbody>
+								    </table>
+								</div> 
+								</td>
+							</tr>
+							
+                              <tr data-toggle="collapse" data-target="#002" class="accordion-toggle collapsed weak">
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Polynomials</a>
+                                 	<div class="progress" style="width: 50%;">
+									    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+									      80% Complete
+									    </div>
+									  </div>
+                                 </td>
+                                 <td style="font-size: 40px;">24%</td>
+                              </tr>
+                              
+                              <tr>
+								<td colspan="4" class="hiddentablerow">
+								<div class="accordian-body collapse" id="002">
+								    <table class="table accordiantable">
+								        <thead>
+								        <th class="">Sub Topic</th>
+								        <th class="">Progress</th>
+								        <th class="">Proficiency</th>
+								        <th class="">Action</th>
+								        </thead>
+								        <tbody>
+								        <tr>
+								        	<td>Polynomials 1.1</td>
+								            <td>100</td>
+								            <td>6.2</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        <tr>
+								        	<td>Polynomials 1.2</td>
+								            <td>100</td>
+								            <td>7.9</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        </tbody>
+								    </table>
+								</div> 
+								</td>
+							</tr>
+							
+                              <tr data-toggle="collapse" data-target="#003" class="accordion-toggle collapsed proficient">
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Geometry</a>
+                                 	<div class="progress" style="width: 50%;">
+									    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+									      100% Complete
+									    </div>
+									  </div>
+                                 </td>
+                                 <td style="font-size: 40px;">84%</td>
+                              </tr>
+                              
+                              <tr>
+								<td colspan="4" class="hiddentablerow">
+								<div class="accordian-body collapse" id="003">
+								    <table class="table accordiantable">
+								        <thead>
+								        <th class="">Sub Topic</th>
+								        <th class="">Progress</th>
+								        <th class="">Proficiency</th>
+								        <th class="">Action</th>
+								        </thead>
+								        <tbody>
+								        <tr>
+								        	<td>Geometry 1.1</td>
+								            <td>100</td>
+								            <td>6.2</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        <tr>
+								        	<td>Geometry 1.2</td>
+								            <td>100</td>
+								            <td>7.9</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        </tbody>
+								    </table>
+								</div> 
+								</td>
+							</tr>
+							
+                              <tr data-toggle="collapse" data-target="#004" class="accordion-toggle collapsed moderate">
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Calculus</a>
+                                 	<div class="progress" style="width: 50%;">
+									    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+									      60% Complete
+									    </div>
+									  </div>
+                                 </td>
+                                 <td style="font-size: 40px;">76%</td>
+                              </tr>
+                              
+                              <tr>
+								<td colspan="4" class="hiddentablerow">
+								<div class="accordian-body collapse" id="004">
+								    <table class="table accordiantable">
+								        <thead>
+								        <th class="">Sub Topic</th>
+								        <th class="">Progress</th>
+								        <th class="">Proficiency</th>
+								        <th class="">Action</th>
+								        </thead>
+								        <tbody>
+								        <tr>
+								        	<td>Calculus 1.1</td>
+								            <td>100</td>
+								            <td>6.2</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        <tr>
+								        	<td>Calculus 1.2</td>
+								            <td>100</td>
+								            <td>7.9</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        </tbody>
+								    </table>
+								</div> 
+								</td>
+							</tr>
+							
+                              <tr data-toggle="collapse" data-target="#005" class="accordion-toggle collapsed proficient">
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Cartesian</a>
+                                 	<div class="progress" style="width: 50%;">
+									    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+									      100% Complete
+									    </div>
+									  </div>
+                                 </td>
+                                 <td style="font-size: 40px;">91%</td>
+                              </tr>
+                              
+                              <tr>
+								<td colspan="4" class="hiddentablerow">
+								<div class="accordian-body collapse" id="005">
+								    <table class="table accordiantable">
+								        <thead>
+								        <th class="">Sub Topic</th>
+								        <th class="">Progress</th>
+								        <th class="">Proficiency</th>
+								        <th class="">Action</th>
+								        </thead>
+								        <tbody>
+								        <tr>
+								        	<td>Cartesian 1.1</td>
+								            <td>100</td>
+								            <td>6.2</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        <tr>
+								        	<td>Cartesian 1.2</td>
+								            <td>100</td>
+								            <td>7.9</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        </tbody>
+								    </table>
+								</div> 
+								</td>
+							</tr>
+							
+                              <tr data-toggle="collapse" data-target="#006" class="accordion-toggle collapsed proficient">
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Trigonometry</a>
+                                 	<div class="progress" style="width: 50%;">
+									    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+									      100% Complete
+									    </div>
+									  </div>
+                                 </td>
+                                 <td style="font-size: 40px;">95%</td>
+                              </tr>
+                              
+                              <tr>
+								<td colspan="4" class="hiddentablerow">
+								<div class="accordian-body collapse" id="006">
+								    <table class="table accordiantable">
+								        <thead>
+								        <th class="">Sub Topic</th>
+								        <th class="">Progress</th>
+								        <th class="">Proficiency</th>
+								        <th class="">Action</th>
+								        </thead>
+								        <tbody>
+								        <tr>
+								        	<td>Trigonometry 1.1</td>
+								            <td>100</td>
+								            <td>6.2</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        <tr>
+								        	<td>Trigonometry 1.2</td>
+								            <td>100</td>
+								            <td>7.9</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        </tbody>
+								    </table>
+								</div> 
+								</td>
+							</tr>
+							
+                              <tr data-toggle="collapse" data-target="#007" class="accordion-toggle collapsed weak">
+                                 <td><a href="TopicPage.jsp" style="font-size: 25px;">Number theory</a>
+                                 	<div class="progress" style="width: 50%;">
+									    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+									      100% Complete
+									    </div>
+									  </div>
+                                 </td>
+                                 <td style="font-size: 40px;">32%</td>
+                              </tr>
+                              
+                              <tr>
+								<td colspan="4" class="hiddentablerow">
+								<div class="accordian-body collapse" id="007">
+								    <table class="table accordiantable">
+								        <thead>
+								        <th class="">Sub Topic</th>
+								        <th class="">Progress</th>
+								        <th class="">Proficiency</th>
+								        <th class="">Action</th>
+								        </thead>
+								        <tbody>
+								        <tr>
+								        	<td>Number theory 1.1</td>
+								            <td>100</td>
+								            <td>6.2</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        <tr>
+								        	<td>Number theory 1.2</td>
+								            <td>100</td>
+								            <td>7.9</td>
+								            <td>
+			                                  <div class="btn-group">
+			                                      <a class="btn btn-primary" href="TestPage.jsp"><i class="icon_plus_alt2" title="Request test"></i></a>
+			                                  </div>
+			                                </td>
+								        </tr>
+								        </tbody>
+								    </table>
+								</div> 
+								</td>
+							</tr>
+                            </tbody>
+                        </table>
+      						</div>
+      					</div>
 				        
-				        <div class="row tab-pane fade" id="suggestedSolution1Container">
+				        <div class="row tab-pane fade" id="students">
 				        	<section class="panel">
 				        		<div class="panel panel-default">
 				        			<div class="panel-body">
@@ -531,163 +806,10 @@
 						        </div>
 					        </section>
 				        </div>
-				        
-				        <div class="row tab-pane fade" id="question1StatisticsContainer">
-				        	<section class="panel">
-				        		<div class="panel panel-default">
-				        			<div class="panel-body">
-				        				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-						                    <div class="info-box dark-bg" align="center" style="margin:0 auto;">
-												<div class="title"><a href="CoursePage.jsp">Time taken</a></div>
-												<div class="count" title="">71 sec</div>
-												<div class="small" title="Class average">62Sec</div>					
-											</div>
-						                 </div>
-							               
-							             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-						                    <div class="info-box dark-bg" align="center" style="margin:0 auto;">
-												<div class="title"><a href="CoursePage.jsp">Class submissions</a></div>
-												<div class="count" title="">11(19)</div>					
-											</div>
-						                 </div> 
-				        			</div>
-				        		</div>
-				        	</section>
-				        </div>
 				    </div>
                     </section>
 				</div>
 				           
-			</div>
-			<div class="row" id="question2">
-				<div class="col-lg-12">
-					<section class="panel">
-                      <header class="panel-heading">
-                          <h3>Question 2</Char>
-                      </header>
-                      <ul class="nav nav-tabs" role="tablist">
-				      <li class="active">
-				          <a href="#question2Container" role="tab" data-toggle="tab">
-				              <icon class="fa fa-question"></icon> Question
-				          </a>
-				      </li>
-				      <li><a href="#detailedSolution2Container" role="tab" data-toggle="tab">
-				          <i class="fa fa-eye"></i> Solution
-				          </a>
-				      </li>
-				      <li>
-				          <a href="#suggestedSolution2Container" role="tab" data-toggle="tab">
-				              <i class="fa fa-users"></i> Discussion
-				          </a>
-				      </li>
-				      <li>
-				          <a href="#question2StatisticsContainer" role="tab" data-toggle="tab">
-				              <i class="fa fa-tachometer"></i> Statistics
-				          </a>
-				      </li>
-				    </ul>
-				    <div class="tab-content">
-                      <div class="row tab-pane fade active in" id="question2Container">
-                  		<div class="col-lg-12" style="padding-left: 2%;">
-                  			<p class="text-justify" style="font-size: 15px;">
-                  			Home, where I learned the truth about despair, as will you. There's a reason why this prison is the worst hell on earth... Hope. Every man who has rotted here over the centuries has looked up to the light and imagined climbing to freedom. So easy... So simple... And like shipwrecked men turning to sea water from uncontrollable thirst, many have died trying. I learned here that there can be no true despair without hope. So, as I terrorize Gotham, I will feed its people hope to poison their souls. I will let them believe they can survive so that you can watch them clambering over each other to stay in the sun. You can watch me torture an entire city and when you have truly understood the depth of your failure, we will fulfill Ra's al Ghul's destiny... We will destroy Gotham and then, when it is done and Gotham is...ashes... then you have my permission to die.
-                  			</p>
-                  		</div>
-                  		<div id="imagesHolder" class="col-lg-12">
-							<ul class="row">
-					            <li class="col-lg-2 col-md-2 col-sm-4 col-xs-3">
-					                <img class="img-responsive" src="images/1.jpg">
-					            </li>
-			          		</ul> 
-						</div>
-                  		<div class="input-group" id="optionsContainer">
-	                  		<div class="col-sm-12">
-	                  			 	<span class="input-group-addon">
-					                	A
-					              	</span>
-					                <p class="text-justify form-control" style="font-size: 15px;">
-		                  			Gotham needed a hero.
-		                  			</p>
-					              
-					        </div>
-					        <div class="col-sm-12">
-                  			 	<span class="input-group-addon">
-				                	B
-				              	</span>
-				                <p class="text-justify form-control" style="font-size: 15px;">
-		                  			Not everything. Not yet.
-		                  		</p>
-				              
-				        	</div>
-				        	<div class="col-sm-12">
-                  			 	<span class="input-group-addon">
-				                	C
-				              	</span>
-				                <p class="text-justify form-control" style="font-size: 15px;">
-		                  			The shadows betray you, because they belong to me.
-		                  		</p>
-				              
-				        	</div>
-				        	<div class="col-sm-12 ">
-				        		<span class="input-group-addon">
-				                	D
-				              	</span>
-				                <p class="text-justify form-control correct" style="font-size: 15px;">
-		                  			Every Hero Has a Journey. Every Journey Has an End.
-		                  		</p>
-				              
-				        	</div>
-				        </div>
-				        
-                  		</div>
-                  		<div class="tab-pane fade" id="detailedSolution2Container">
-				        	<section class="panel">
-					        	<div class="col-lg-12" style="padding-left: 2%;">
-					        		<h3>Computing the area of rectangle</h3>
-					        		<p>Detailed explaination of finding the area of rectangle</p>
-					        	</div>
-					        	</section>
-				        </div>
-				        
-				        <div class="tab-pane fade" id="suggestedSolution2Container">
-				        	<section class="panel">
-					        	<div class="col-lg-12" style="padding-left: 2%;">
-					        		<p>Its not who i am underneath, its what i do, that defines me!</p>
-					        	</div>
-					        </section>
-					        
-					        <section class="panel">
-					        	<div class="col-lg-12" style="padding-left: 2%;">
-					        		<p>Innocent is strong word to throw around these people, Bruce.</p>
-					        	</div>
-					        </section>
-				        </div>
-				        <div class="row tab-pane fade" id="question2StatisticsContainer">
-				        	<section class="panel">
-				        		<div class="panel panel-default">
-				        			<div class="panel-body">
-				        				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-						                    <div class="info-box dark-bg" align="center" style="margin:0 auto;">
-												<div class="title"><a href="CoursePage.jsp">Time taken</a></div>
-												<div class="count" title="">71 sec</div>
-												<div class="small" title="Class average">62Sec</div>					
-											</div>
-						                 </div>
-							               
-							             <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-						                    <div class="info-box dark-bg" align="center" style="margin:0 auto;">
-												<div class="title"><a href="CoursePage.jsp">Class submissions</a></div>
-												<div class="count" title="">11(19)</div>					
-											</div>
-						                 </div> 
-				        			</div>
-				        		</div>
-				        	</section>
-				        </div>     
-				        
-				        </div>
-                    </section>
-				</div>
 			</div>
          </section>
   </section>

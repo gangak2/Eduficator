@@ -279,12 +279,12 @@ textarea {
   background-image: none;
 }
 a {
-  color: #007aff;
+  color: #000000;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #0055b3;
+  color: #000000;
   text-decoration: underline;
 }
 a:focus {
@@ -3353,7 +3353,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #8e8e93;
+  color: #5F5FD4;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;

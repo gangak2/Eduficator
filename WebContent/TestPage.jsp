@@ -51,219 +51,10 @@
             <a href="index.html" class="logo">Edu <span class="lite">Ficator</span></a>
             <!--logo end-->
 
-            <div class="nav search-row" id="top_menu">
-                <!--  search form start -->
-                <ul class="nav top-menu">                    
-                    <li>
-                        <form class="navbar-form">
-                            <input class="form-control" placeholder="Search" type="text">
-                        </form>
-                    </li>                    
-                </ul>
-                <!--  search form end -->                
-            </div>
 
             <div class="top-nav notification-row">                
                 <!-- notificatoin dropdown start-->
                 <ul class="nav pull-right top-menu">
-                    
-                    <!-- task notificatoin start -->
-                    <li id="task_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="icon-task-l"></i>
-                            <span class="badge bg-important">5</span>
-                        </a>
-                        <ul class="dropdown-menu extended tasks-bar">
-                            <div class="notify-arrow notify-arrow-blue"></div>
-                            <li>
-                                <p class="blue">You have 5 pending tasks</p>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="task-info">
-                                        <div class="desc">Design PSD </div>
-                                        <div class="percent">90%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                                            <span class="sr-only">90% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="task-info">
-                                        <div class="desc">
-                                            Project 1
-                                        </div>
-                                        <div class="percent">30%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-                                            <span class="sr-only">30% Complete (warning)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="task-info">
-                                        <div class="desc">Digital Marketing</div>
-                                        <div class="percent">80%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                            <span class="sr-only">80% Complete</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="task-info">
-                                        <div class="desc">Logo Designing</div>
-                                        <div class="percent">78%</div>
-                                    </div>
-                                    <div class="progress progress-striped">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%">
-                                            <span class="sr-only">78% Complete (danger)</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div class="task-info">
-                                        <div class="desc">Mobile App</div>
-                                        <div class="percent">50%</div>
-                                    </div>
-                                    <div class="progress progress-striped active">
-                                        <div class="progress-bar"  role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
-                                            <span class="sr-only">50% Complete</span>
-                                        </div>
-                                    </div>
-
-                                </a>
-                            </li>
-                            <li class="external">
-                                <a href="#">See All Tasks</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- task notificatoin end -->
-                    <!-- inbox notificatoin start-->
-                    <li id="mail_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <i class="icon-envelope-l"></i>
-                            <span class="badge bg-important">5</span>
-                        </a>
-                        <ul class="dropdown-menu extended inbox">
-                            <div class="notify-arrow notify-arrow-blue"></div>
-                            <li>
-                                <p class="blue">You have 5 new messages</p>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Greg  Martin</span>
-                                    <span class="time">1 min</span>
-                                    </span>
-                                    <span class="message">
-                                        I really like this admin panel.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini2.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Bob   Mckenzie</span>
-                                    <span class="time">5 mins</span>
-                                    </span>
-                                    <span class="message">
-                                     Hi, What is next project plan?
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini3.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Phillip   Park</span>
-                                    <span class="time">2 hrs</span>
-                                    </span>
-                                    <span class="message">
-                                        I am like to buy this Admin Template.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="photo"><img alt="avatar" src="./img/avatar-mini4.jpg"></span>
-                                    <span class="subject">
-                                    <span class="from">Ray   Munoz</span>
-                                    <span class="time">1 day</span>
-                                    </span>
-                                    <span class="message">
-                                        Icon fonts are great.
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">See all messages</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- inbox notificatoin end -->
-                    <!-- alert notification start-->
-                    <li id="alert_notificatoin_bar" class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-
-                            <i class="icon-bell-l"></i>
-                            <span class="badge bg-important">7</span>
-                        </a>
-                        <ul class="dropdown-menu extended notification">
-                            <div class="notify-arrow notify-arrow-blue"></div>
-                            <li>
-                                <p class="blue">You have 4 new notifications</p>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="label label-primary"><i class="icon_profile"></i></span> 
-                                    Friend Request
-                                    <span class="small italic pull-right">5 mins</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="label label-warning"><i class="icon_pin"></i></span>  
-                                    John location.
-                                    <span class="small italic pull-right">50 mins</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="label label-danger"><i class="icon_book_alt"></i></span> 
-                                    Project 3 Completed.
-                                    <span class="small italic pull-right">1 hr</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="label label-success"><i class="icon_like"></i></span> 
-                                    Mick appreciated your work.
-                                    <span class="small italic pull-right"> Today</span>
-                                </a>
-                            </li>                            
-                            <li>
-                                <a href="#">See all notifications</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- alert notification end-->
-                    <!-- user login dropdown start-->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
@@ -307,36 +98,30 @@
       <!--sidebar start-->
       <aside>
           <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu"> 
-              	  <li class="">
-		                <img class="img-responsive" src="images/1.jpg">
-		          </li>        
-              </ul>
-              
-               <div class="panel panel-default">
-              	 <div class="panel-body">
-              	 	<a class="" href="CoursePage.jsp">
-                          <i class="icon_close_alt2"></i>
-                          <span>Abandon Test</span>
-                      </a>
-              	 </div>
-              </div>
-             <!--  <div class="panel panel-default" data-toggle="tooltip" data-placement="top" title="There is still some time. Chill!">
-			      <div class="panel-body">
-			        <div class="lead" id="clock" align="center" style="margin:0 auto;"></div>
-			      </div>
-			    </div> -->
-              
-              <div class="panel panel-default">
-              	 <div class="panel-body">
-              	 	<button type="button" class="btn btn-default" style="width:100%;" title="Whatever doesnt kill you simply makes you stranger<">Whatever doesnt kill you simply makes you stranger</button>
-              	 	<button type="button" class="btn btn-default" style="width:100%;">You either die a hero, or live long enough to see yourself become the villain</button>
-              	 	<button type="button" class="btn btn-default" style="width:100%;">I believe in Harvey Dent!</button>
-              	 	<button type="button" class="btn btn-default" style="width:100%;"></button>
-              	 </div>
-              </div>
-              
+              <div class="sidebar-menu" id="myScrollspy" style="text-align: left; margin-top: 70px; margin-bottom: 70px; text-font: 30px;">
+             	 	<ul class="nav nav-tabs nav-stacked">
+		                <li style="border: solid 1px black;"><a href="#question4">Whatever doesnt kill you simply makes you stranger <span class="fa fa-bookmark pull-right" style="color:green"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#question2">You either die a hero, or live long enough to see yourself become the villain<span class="fa fa-bookmark pull-right" style="color:white;"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#section-3">I believe in Harvey Dent!<span class="fa fa-bookmark pull-right" style="color:green;"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#question1">Home, where I learned the truth about despair....<span class="fa fa-bookmark pull-right" style="color:white;"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#section-5">Question 5 <span class="fa fa-bookmark pull-right" style="color:white;"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#question1">Question 6 <span class="fa fa-bookmark pull-right" style="color:white;"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#question2">Question 7 <span class="fa fa-bookmark pull-right" style="color:#FF9900;"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#section-3">Question 8 <span class="fa fa-bookmark pull-right" style="color:white;"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#section-4">Question 9 <span class="fa fa-bookmark pull-right" style="color:white;"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#section-5">Question 10 <span class="fa fa-bookmark pull-right" style="color:white;"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#question1">Question 11 <span class="fa fa-bookmark pull-right" style="color:white;"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#question2">Question 12 <span class="fa fa-bookmark pull-right" style="color:white;"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#section-3">Question 13 <span class="fa fa-bookmark pull-right" style="color:white"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#section-4">Question 14 <span class="fa fa-bookmark pull-right" style="color:white"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#section-5">Question 15 <span class="fa fa-bookmark pull-right" style="color:white"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#question1">Question 16 <span class="fa fa-bookmark pull-right" style="color:white"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#question2">Question 17 <span class="fa fa-bookmark pull-right" style="color:white"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#section-3">Question 18 <span class="fa fa-bookmark pull-right" style="color:white"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#section-4">Question 19 <span class="fa fa-bookmark pull-right" style="color:white"></span></a></li>
+		                <li style="border: solid 1px black;"><a href="#section-5">Question 20 <span class="fa fa-bookmark pull-right" style="color:white"></span></a></li>
+		            </ul>
+             	 </div>
               <!-- sidebar menu end-->
           </div>
       </aside>
@@ -345,9 +130,8 @@
       <section id="main-content">
           <section class="wrapper">
 		  <div class="row">
-				<div class="col-lg-9" id="paginator">
-				</div>
-				<div class="col-lg-10">
+		  		
+				<div class="col-lg-12">
 					<section class="panel">
                       <header class="panel-heading">
                           <h3>Question 1</Char>
@@ -403,18 +187,20 @@
 				              
 				        	</div>
 				        </div>
-				        <div class="form-group">
-						  <label class="col-md-4 control-label" for="questionSubmit"></label>
-						  <div class="col-md-8">
-						  	<button id="questionPreview" name="questionPreview" class="btn btn-primary" ><<</button>
-						    <button id="questionSubmit" name="questionSubmit" class="btn btn-default" >Mark & continue</button>
-						    <button id="cancel" name="cancel" class="btn btn-primary">>></button>
-						  </div>
-						</div>
                   		</div>
                     </section>
 				</div>
-				<div>
+				
+				<div class="col-lg-12">
+					<div class="btn-group col-lg-4" role="group">
+				    	<button type="button" class="btn btn-primary" id="previousQuestion" name="previousQuestion" style="width:100%;"><<</button>
+				  	</div>
+				  	<div class="btn-group col-lg-4" role="group">
+				    	<button type="button" class="btn btn-default" id="markQuestion" name="markQuestion" style="width:100%;">Mark for review</button>
+				  	</div>
+				  	<div class="btn-group col-lg-4" role="group">
+				    	<button type="button" class="btn btn-primary" id="nextQuestion" name="nextQuestion" style="width:100%;">>></button>
+				  	</div>
 				</div>
 			</div>
          </section>
@@ -443,11 +229,11 @@
 
   var clock = $('#clock');
   
-  $('#paginator').bootpag({
+ /*  $('#paginator').bootpag({
 	  total: 50,
 	  page: 1,
 	  maxVisible: 15
-  });
+  }); */
   
   $('#optionsContainer div p').on('click', function(event) {
 		$('#optionsContainer div p').removeClass('highlight');
