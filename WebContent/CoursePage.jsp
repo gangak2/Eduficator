@@ -46,9 +46,6 @@
   <section id="container" class="">
       <!--header start-->
       <header class="header dark-bg">
-            <div class="toggle-nav">
-                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
-            </div>
 
             <!--logo start-->
             <a href="index.html" class="logo">Edu <span class="lite">Ficator</span></a>
@@ -315,50 +312,13 @@
               	  <li class="">
 		                <img class="img-responsive" src="images/1.jpg">
 		          </li>               
-                  <li class="active">
-                      <a class="" href="index.jsp">
-                          <i class="icon_house_alt"></i>
-                          <span>Dashboard</span>
+                  <li class="sub-menu">
+                      <a class="" href="CoursePracticePage.jsp">
+                          <i class="fa fa-edit"></i>
+                          <span>Practice</span>
                       </a>
                   </li>
-				  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Courses</span>
-                          <span class="menu-arrow arrow_carrot-down"></span>
-                      </a>
-                      <ul class="sub">
-                          <li><a class="" href="CoursePage.jsp">Mathematics</a></li>                          
-                          <li><a class="" href="CoursePage.jsp">Physics</a></li>
-                          <li><a class="" href="CoursePage.jsp">Chemistry</a></li>                          
-                          <li><a class="" href="CoursePage.jsp">English</a></li>
-                      </ul>
-                  </li>       
-                    
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Upcoming</span>
-                          <span class="menu-arrow arrow_carrot-down"></span>
-                      </a>
-                      <ul class="sub">
-                          <li><a class="" href="">Surface areas </a></li>                          
-                          <li><a class="" href="">Cartesian</a></li>
-                      </ul>
-                  </li> 
-                  
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Active</span>
-                          <span class="menu-arrow arrow_carrot-down"></span>
-                      </a>
-                      <ul class="sub">
-                          <li><a class="" href="">Algebra</a></li>                          
-                          <li><a class="" href="">Polynomials</a></li>
-                      </ul>
-                  </li>   
-                    <!-- Previous assignments 
+				      <!-- Previous assignments 
                     	Pending assignments-->          
               </ul>
               <!-- sidebar menu end-->

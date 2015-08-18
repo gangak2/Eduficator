@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<%@ page import="com.postgres.jdbc.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%
+	if(request.getSession().getAttribute("activeUserDetails")!= null){
+%>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
-    <meta name="author" content="GeeksLabs">
-    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-    <link rel="shortcut icon" href="img/favicon.png">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Eduficator - Student profile"/>
+    <meta name="author" content="Eduficator Tech Team"/>
+    <meta name="keyword" content="Education, School, Syllabus, Student, Teacher, Performance, Tests, Class"/>
+    <link rel="shortcut icon" href="img/favicon.png"/>
 
-    <title>Student performance analysis</title>
+    <title>Eduficator</title>
 
     <!-- Bootstrap CSS -->    
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <!-- bootstrap theme -->
-    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet"/>
     <!--external css-->
     <!-- font icon -->
     <link href="css/elegant-icons-style.css" rel="stylesheet" />
@@ -27,25 +31,29 @@
     <!-- easy pie chart-->
     <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
     <!-- owl carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-	<link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css"/>
+	<link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet"/>
     <!-- Custom styles -->
-	<link rel="stylesheet" href="css/fullcalendar.css">
-	<link href="css/widgets.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/fullcalendar.css"/>
+	<link href="css/widgets.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
     <link href="css/style-responsive.css" rel="stylesheet" />
-	<link href="css/xcharts.min.css" rel=" stylesheet">	
-	<link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+	<link href="css/xcharts.min.css" rel=" stylesheet"/>	
+	<link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet"/>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
       <script src="js/lte-ie7.js"></script>
     <![endif]-->
-  </head>
-
-  <body>
+</head>
+  
+  
+<body>
   <!-- container section start -->
+  <%
+     Map details = (Map)request.getSession().getAttribute("activeUserDetails");
+  %>
   <section id="container" class="">
      
       
@@ -276,7 +284,7 @@
                             <span class="profile-ava">
                                 <img alt="" src="img/avatar1_small.jpg">
                             </span>
-                            <span class="username">Jenifer Smith</span>
+                            <span class="username"><%= details.get("name") %></span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
@@ -285,22 +293,7 @@
                                 <a href="#"><i class="icon_profile"></i> My Profile</a>
                             </li>
                             <li>
-                                <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon_clock_alt"></i> Timeline</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon_chat_alt"></i> Chats</a>
-                            </li>
-                            <li>
-                                <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
-                            </li>
-                            <li>
-                                <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
-                            </li>
-                            <li>
-                                <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
+                                <a href="userLogoutServlet"><i class="icon_key_alt"></i> Log Out</a>
                             </li>
                         </ul>
                     </li>
@@ -318,49 +311,40 @@
               <ul class="sidebar-menu"> 
               	  <li class="">
 		                <img class="img-responsive" src="images/1.jpg">
-		          </li>               
-                  <li class="active">
-                      <a class="" href="index.html">
-                          <i class="icon_house_alt"></i>
-                          <span>Dashboard</span>
-                      </a>
-                  </li>
-				  <li class="sub-menu">
-                      <a href="javascript:;" class="">
+		          </li> 
+				  <li class="active">
+                      <a href="#classrooms" class="">
                           <i class="icon_document_alt"></i>
-                          <span>Courses</span>
-                          <span class="menu-arrow arrow_carrot-down"></span>
+                          <span>Classrooms</span>
                       </a>
-                      <ul class="sub">
-                          <li><a class="" href="CoursePage.jsp">Mathematics</a></li>                          
-                          <li><a class="" href="CoursePage.jsp">Physics</a></li>
-                          <li><a class="" href="CoursePage.jsp">Chemistry</a></li>                          
-                          <li><a class="" href="CoursePage.jsp">English</a></li>
-                      </ul>
                   </li>       
                     
                   <li class="sub-menu">
-                      <a href="javascript:;" class="">
+                      <a href="#openclassrooms" class="">
                           <i class="icon_document_alt"></i>
-                          <span>Upcoming</span>
-                          <span class="menu-arrow arrow_carrot-down"></span>
+                          <span>Open classrooms</span>
                       </a>
-                      <ul class="sub">
-                          <li><a class="" href="">Surface areas </a></li>                          
-                          <li><a class="" href="">Cartesian</a></li>
-                      </ul>
                   </li> 
                   
                   <li class="sub-menu">
-                      <a href="javascript:;" class="">
+                      <a href="#questionoftheday" class="">
                           <i class="icon_document_alt"></i>
-                          <span>Active</span>
-                          <span class="menu-arrow arrow_carrot-down"></span>
+                          <span>Question of the day</span>
                       </a>
-                      <ul class="sub">
-                          <li><a class="" href="">Algebra</a></li>                          
-                          <li><a class="" href="">Polynomials</a></li>
-                      </ul>
+                  </li>  
+                  
+                  <li class="sub-menu">
+                      <a href="#calendarcontainer" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>Calendar</span>
+                      </a>
+                  </li>
+                  
+                  <li class="sub-menu">
+                      <a href="#dashboard" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>Dashboard</span>
+                      </a>
                   </li>   
                     <!-- Previous assignments 
                     	Pending assignments-->          
@@ -374,9 +358,9 @@
       <section id="main-content">
           <section class="wrapper">            
               <!--overview start-->
-			  <div class="row">
+			<div class="row">
 				<div class="col-lg-12">
-					<h3 class="page-header"><i class="fa fa-laptop"></i> Jenifer Smith</h3>
+					<h3 class="page-header"><i class="fa fa-laptop"></i> <%= details.get("name") %> </h3>
 					<ol class="breadcrumb">
 						<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
 						<li><i class="fa fa-laptop"></i>Dashboard</li>						  	
@@ -384,44 +368,65 @@
 				</div>
 			</div>
               
-            <div class="row">
-            	<!--  Subjects with summary -->
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box dark-bg" align="center" style="margin:0 auto;">
-						<i class="fa fa-thumbs-o-up"></i>
-						<!-- <div class="count">6.674</div> -->
-						<div class="title"><a href="CoursePage.jsp">Mathematics</a></div>	
-						<div class="count">92%</div>			
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box dark-bg" align="center" style="margin:0 auto;">
-						<i class="fa fa-thumbs-o-up"></i>
-						<!-- <div class="count">7.538</div> -->
-						<div class="title"><a href="CoursePage.jsp">Physics</a></div>
-						<div class="count">84%</div>							
-					</div><!--/.info-box-->			
-				</div><!--/.col-->	
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box dark-bg" align="center" style="margin:0 auto;">
-						<i class="fa fa-thumbs-o-down"></i>
-						<!-- <div class="count">4.362</div> -->
-						<div class="title"><a href="CoursePage.jsp">Chemistry</a></div>
-						<div class="count">71%</div>						
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
-				
-				<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-					<div class="info-box dark-bg" align="center" style="margin:0 auto;">
-						<i class="fa fa-thumbs-o-up"></i>
-						<!-- <div class="count">1.426</div> -->
-						<div class="title"><a href="CoursePage.jsp">English</a></div>
-						<div class="count">98%</div>							
-					</div><!--/.info-box-->			
-				</div><!--/.col-->
-				
+            <div class="row" id="classrooms">
+            	<div class="col-md-12 portlets">
+            		<div class="panel panel-default">
+						<div class="panel-heading">
+                  			<h2><strong>Classrooms</strong></h2>
+                		</div>
+                		<div class="panel-body">
+                			<div class="row" id="classroomscontainer">
+                				You havent been enrolled in any classes yet.
+                			</div>
+                		</div>
+                	</div>
+                </div>
+            </div>
+            <div class="row" id="openclassrooms">
+            	<div class="col-md-12 portlets">
+            		<div class="panel panel-default">
+						<div class="panel-heading">
+                  			<h2><strong>Open classrooms</strong></h2>
+                		</div>
+                		<div class="panel-body">
+                			<div class="row" id="openClassroomscontainer">
+				            	<!--  Enrolled courses -->
+				            	<%
+				            		List<EnrolledCourse> openClassroomEnrolledCourses = (List) details.get("openClassroomEnrolledCourses");
+				            		for(EnrolledCourse ec: openClassroomEnrolledCourses){
+				            			out.println(ec.writeIntoHTML());
+				            		}
+				            	%>
+								<div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
+									<div class="btn info-box light-bg" align="center" style="margin:0 auto;" data-toggle="collapse" data-target="#availableOpenClassrooms">
+										<div class="title"><a>Add new course</a></div>	
+										<div class="count">+</div>			
+									</div>			
+								</div>
+							</div>
+							<div class="panel panel-default collapse" id="availableOpenClassrooms">
+								<div class="panel-heading">
+		                  			<h2><strong>Available courses</strong></h2>
+		                		</div>
+								<div class="row">
+									<!-- <span id="lodingsuggestionsoc"><i class="fa fa-spinner fa-spin"></i></span> -->
+									<div class="col-lg-12 panel">
+	      								<table class="table table-advance" id="courseProgress">
+	                           				<tbody>
+	                           				<%
+							            		List<ClassroomCourse> availabelClassroomCourses = (List) details.get("availabelClassroomCourses");
+							            		for(ClassroomCourse cc: availabelClassroomCourses){
+							            			out.println(cc.writeToHTML());
+							            		}
+							            	%>
+	                           				</tbody>
+	                           			</table>
+	                           		</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div><!--/.row-->
 		
 			
@@ -431,8 +436,8 @@
                     
 				
 
-			<div class="row">
-				<div class="col-md-9 portlets">
+			<div class="row" id="questionoftheday">
+				<div class="col-md-12 portlets">
             		<div class="panel panel-default">
 						<div class="panel-heading">
                   			<h2><strong>Question of the day</strong></h2>
@@ -499,32 +504,17 @@
                			 </div>
               		</div> 
                </div>
-               
-               <div class="col-md-3 portlets">
-               		<div class="panel panel-default">
-						<div class="panel-heading">
-                  			<h2><strong>Recent Activities</strong></h2>
-                  		</div>
-	                	<div class="panel-body">
-	                  		Home, where I learned</br>
-	                  		the truth about despair,</br>
-	                  		as will you. There's a</br>
-	                  		reason why this prison</br>
-	                  		is the worst hell on earth...
-	                    </div>
-              		</div> 
-               </div>
 			</div>
 			
-              		<div class="row">
-			<div class="col-md-6 portlets">
+            <div class="row" id="calendarcontainer">
+			<div class="col-md-12 portlets">
             <div class="panel panel-default">
 				<div class="panel-heading">
-                  <h2><strong>Calendar</strong></h2>
-				<div class="panel-actions">
-                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a> 
-                    <a href="#" class="wclose"><i class="fa fa-times"></i></a>
-                </div>  
+                  	<h2><strong>Calendar</strong></h2>
+					<div class="panel-actions">
+	                    <a href="#" class="wminimize"><i class="fa fa-chevron-up"></i></a> 
+	                    <a href="#" class="wclose"><i class="fa fa-times"></i></a>
+	                </div>  
                  
                 </div><br><br><br>
                 <div class="panel-body">
@@ -537,17 +527,23 @@
               </div> 
                
             </div >
-            
-            <div class="col-md-6">
-            	<div class="panel-body text-center">
-                    <canvas id="line" height="300" width="450"></canvas>
-                </div>
             </div>
-			<div>
-			</div>
-			
-				
-                        
+            
+             <div class="row" id="dashboard">
+				<div class="col-md-12 portlets">
+            		<div class="panel panel-default">
+						<div class="panel-heading">
+                  			<h2><strong>Dashboard</strong></h2>
+                		</div>
+                		<div class="panel-body">
+				            <div class="col-md-12">
+				            	<div class="panel-body text-center">
+				                    <canvas id="line" height="300" width="500"></canvas>
+				                </div>
+				            </div>
+				        </div>
+				   </div>
+				</div>           
           </div> 
               <!-- project team & activity end -->
 
@@ -655,4 +651,10 @@
   </script>
 
   </body>
+  <%
+	}
+	else{
+		response.sendRedirect("index.jsp");
+	}
+  %>
 </html>

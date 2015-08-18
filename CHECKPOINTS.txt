@@ -1,0 +1,6 @@
+--Ticker
+28/07/15 : Connectivity with the backend database
+29/07/15 : User login and profile page data fetching from the database
+
+--ToDo's
+- Student registration page with option to include the standard and school of the student

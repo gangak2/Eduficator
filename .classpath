@@ -10,5 +10,6 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="lib" path="D:/eclipseprojects/Eduficator/WebContent/lib/javax.servlet-api-3.1.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/eclipseprojects/JDBCDriver/postgresql-9.4-1201.jdbc4.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/eclipseprojects/Eduficator/WebContent/WEB-INF/lib/gson-2.3.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

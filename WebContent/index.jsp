@@ -3,60 +3,80 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>Login to Eduficator</title>
-		<meta name="generator" content="Bootply" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="css/bootstrap-3.3.4/bootstrap.min.css">
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
-		<style>
-			.center {
-			    margin-left: auto;
-			    margin-right: auto;
-			    margin-top: auto;
-			    margin-bottom: auto;
-			    width: 30%;
-			}
-		</style>
-	</head>
-	<body>
-<!--login modal-->
-<div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog center">
-  <div class="modal-content">
-      <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h1 class="text-center">Login</h1>
-      </div>
-      <div class="modal-body">
-          <form action = "./LoginServlet" class="form col-md-12 center-block">
-            <div class="form-group">
-              <input name="username" type="text" class="form-control input-lg" placeholder="Email">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Login Page 2 | Creative - Bootstrap 3 Responsive Admin Template</title>
+
+    <!-- Bootstrap CSS -->    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="login-img3-body">
+
+    <div class="container">
+
+      <form class="login-form" action="userLoginServlet">        
+        <div class="login-wrap">
+            <p class="login-img"><i class="icon_lock_alt"></i></p>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="icon_profile"></i></span>
+              <input type="text" class="form-control" placeholder="Username" autofocus id="email" name="email">
             </div>
-            <div class="form-group">
-              <input name="password" type="password" class="form-control input-lg" placeholder="Password">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                <input type="password" class="form-control" placeholder="Password" id="password" name="password">
             </div>
-            <div class="form-group">
-              <button class="btn btn-primary btn-lg btn-block">Sign In</button>
-              <span class="pull-right"><a href="#">Register</a></span><span class="pull-left"><a href="#">Need help?</a></span>
+            <div class="input-group col-lg-12">
+                <span class="input-group-btn">
+			        <select class="form-control" id="usertype" name="usertype">
+			          <option value="students">I am a Student</option>
+			          <option value="teachers">I am a Teacher</option>
+			          <option value="parents">I am a Parent</option>
+			        </select>
+			      </span>
             </div>
-          </form>
-      </div>
-      <div class="modal-footer">
-          <div class="col-md-12">
-          <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
-		  </div>	
-      </div>
-  </div>
-  </div>
-</div>
-	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-	</body>
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me"> Remember me
+                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+            </label>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            <a class="btn btn-info btn-lg btn-block" href="registration.jsp">First time user? Signup</a>
+        </div>
+      </form>
+
+    </div>
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55234356-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
 </html>
