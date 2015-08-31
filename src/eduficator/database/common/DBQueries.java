@@ -1,4 +1,4 @@
-package com.postgres.jdbc;
+package eduficator.database.common;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,7 +15,7 @@ public class DBQueries {
 		
 	}
 	
-	public static List<OpenCourse> getAllCourses(){
+	public List<OpenCourse> getAllCourses(){
 		List<OpenCourse> courses = new ArrayList<OpenCourse>();
 		try{
 			Statement stmt = JDBCConnection.connection.createStatement();

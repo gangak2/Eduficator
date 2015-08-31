@@ -8,11 +8,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import eduficator.database.common.JDBCConnection;
+
 public class StudentDetails {
 	
 	String userid = null;
 	String usertype = null;
-	Map<Object,Object> details = new HashMap(); 
+	Map<Object,Object> details = new HashMap<Object, Object>(); 
 	
 	public StudentDetails(String usrid, String usrtype){
 		this.userid = usrid;
@@ -26,7 +28,7 @@ public class StudentDetails {
 			JDBCConnection database = new JDBCConnection();
 			//Fetching the user first name and last name 
 			String getdetailsStatement = "SELECT firstname, lastname FROM students WHERE id = "+ this.userid;
-			Statement stmtDetails = database.connection.createStatement();
+			Statement stmtDetails = database.getConnection().createStatement();
 			ResultSet rs = stmtDetails.executeQuery(getdetailsStatement);
 			while(rs.next()){
 				this.details.put("name", rs.getString("firstname") + " " + rs.getString("lastname"));
@@ -34,7 +36,7 @@ public class StudentDetails {
 			}
 			//Fetching user enrolled courses and corresponding details
 			String getEnrolledCourses = "SELECT oc.subject as subject, oc.class as class, oce.proficiency as proficiency FROM openclassroomenrollments AS oce inner join openclassrooms AS oc ON oc.id = oce.classroom WHERE oce.student = " + this.userid;
-			Statement stmtEnrolledCourses = database.connection.createStatement();
+			//Statement stmtEnrolledCourses = database.getConnection().createStatement();
 			ResultSet rocs = stmtDetails.executeQuery(getEnrolledCourses);
 			List<EnrolledCourse> openClassroomEnrolledCourses = new ArrayList<EnrolledCourse>();
 			while(rocs.next()){

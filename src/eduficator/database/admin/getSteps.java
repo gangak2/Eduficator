@@ -1,4 +1,4 @@
-package com.postgres.jdbc;
+package eduficator.database.admin;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -11,17 +11,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import eduficator.database.common.JDBCConnection;
+
 /**
- * Servlet implementation class getFormulae
+ * Servlet implementation class getSteps
  */
-@WebServlet("/getFormulae")
-public class getFormulae extends HttpServlet {
+@WebServlet("/getSteps")
+public class getSteps extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public getFormulae() {
+    public getSteps() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,19 +36,19 @@ public class getFormulae extends HttpServlet {
 		
 		try {
 			JDBCConnection database = new JDBCConnection();
-			Statement stmt = database.connection.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT * FROM formulae WHERE topic='" + topic + "'");
-			String formulaList = "";
+			Statement stmt = database.getConnection().createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM steps WHERE topic='" + topic + "'");
+			String stepsList = "";
 			while(rs.next()){
-				formulaList += rs.getString("formula") + "#";
+				stepsList += rs.getString("step") + "#";
 			}
-			if(formulaList.endsWith("#")){
-				formulaList = formulaList.substring(0, formulaList.length()-1);
+			if(stepsList.endsWith("#")){
+				stepsList = stepsList.substring(0, stepsList.length()-1);
 			}
-			System.out.println("The steps list retireved is " +  formulaList);
+			System.out.println("The steps list retireved is " +  stepsList);
 			response.setContentType("text/plain");  
 			response.setCharacterEncoding("UTF-8"); 
-			response.getWriter().write(formulaList);
+			response.getWriter().write(stepsList);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

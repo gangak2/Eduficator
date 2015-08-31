@@ -1,4 +1,4 @@
-package com.postgres.jdbc;
+package eduficator.database.admin;
 
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -13,17 +13,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import eduficator.database.common.JDBCConnection;
+
 /**
- * Servlet implementation class getSubTopics
+ * Servlet implementation class QuestionImportPageServlet
  */
-@WebServlet("/getSubTopics")
-public class getSubTopics extends HttpServlet {
+@WebServlet("/QuestionImportPageServlet")
+public class QuestionImportPageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public getSubTopics() {
+    public QuestionImportPageServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,24 +34,21 @@ public class getSubTopics extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String topic = request.getParameter("topic");
-		
 		try {
 			JDBCConnection database = new JDBCConnection();
-			Statement stmt = database.connection.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT * FROM subtopics WHERE topic='" + topic + "'");
-			String subtopicList = "";
-			while(rs.next()){
-				subtopicList += rs.getString("SubTopic") + "#";
+			Statement stmtTopics = database.getConnection().createStatement();
+			ResultSet topics = stmtTopics.executeQuery("SELECT * FROM topics");
+			ArrayList<String> topicList = new ArrayList<String>();
+			while(topics.next()){
+				System.out.println(topics.getString(1));
+				topicList.add(topics.getString(1));
 			}
-			if(subtopicList.endsWith("#")){
-				subtopicList = subtopicList.substring(0, subtopicList.length()-1);
-			}
-			System.out.println(subtopicList);
-			response.setContentType("text/plain");  
-			response.setCharacterEncoding("UTF-8"); 
-			response.getWriter().write(subtopicList);
-		} catch (SQLException e) {
+			System.out.println(topicList.toString());
+			request.setAttribute("topics", topicList);
+			RequestDispatcher rd = request.getRequestDispatcher("admin/NewQuestion.jsp");
+			rd.forward(request, response);
+		}
+		catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {

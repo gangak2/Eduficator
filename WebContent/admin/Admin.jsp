@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="eduficator.data.definition.*,java.util.*"%>
+    pageEncoding="UTF-8" import="java.util.*,eduficator.database.admin.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en">
-	<%
-		if((boolean)request.getSession().getAttribute("authenticated")==true){
-			OpenCourse course = (OpenCourse)request.getAttribute("course");
-	%>
+<<html lang="en">
   <head>
-    <title>Course details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>New question</title>
 
     <!-- Bootstrap CSS -->    
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap theme -->
-    <link href="css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
     <!--external css-->
     <!-- font icon -->
-    <link href="css/elegant-icons-style.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
     <!-- Custom styles -->
-    <link href="css/style.css" rel="stylesheet"/>
-    <link href="css/style-responsive.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style-responsive.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
@@ -29,6 +32,13 @@
       <script src="js/lte-ie7.js"></script>
     <![endif]-->
     
+    <style>
+    .highlight{background-color:#7fcce5 !important;}
+    .accordiantable{background-color:#DCDCDC !important;}
+    .weak{background-color:#FFE6E6 !important;}
+    .moderate{background-color:#FFFFFF !important;}
+    .proficient{background-color:#EBFAEB !important;}
+    </style>
   </head>
 
   <body>
@@ -38,22 +48,20 @@
       <header class="header dark-bg">
 
             <!--logo start-->
-            <a href="index.jsp" class="logo">O <span class="lite">Kul</span></a>
+            <a href="index.html" class="logo">O <span class="lite">Kul</span></a>
             <!--logo end-->
 
 
             <div class="top-nav notification-row">                
                 <!-- notificatoin dropdown start-->
                 <ul class="nav pull-right top-menu">
-                    
-                    
                     <!-- user login dropdown start-->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="img/avatar1_small.jpg">
+                                <img alt="" src="../img/avatar1_small.jpg">
                             </span>
-                            <span class="username">Bruce Wayne</span>
+                            <span class="username">Admin</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
@@ -88,34 +96,29 @@
       </header>      
       <!--header end-->
 
+	  <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu"> 
+				  <li class="active">
+                      <a href="../QuestionImportPageServlet" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>Add new question</span>
+                      </a>
+                  </li>       
+                  
+                    <!-- Previous assignments 
+                    	Pending assignments-->          
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
       <!--main content start-->
-      <section id="main-content-fullpage">
-          <section class="wrapper">
-              <!-- page start-->
-              	<div class="row">
-					<div class="col-lg-10">
-						<h3 class="page-header"> 
-							<a class="" href="CoursePage.jsp">
-                       			<i class="fa fa-caret-square-o-left"></i>
-                  			</a>
-                  			<%=course.getCourseName() %>
-                  		</h3>
-					</div>
-				</div>
-				<%
-					List<Topic> topics = course.getAllTopics(); 
-					for(Topic topic:topics){
-						out.println("<div class=\"panel panel-default col-lg-4\" style=\"border: solid 1px black;\">");
-						out.println("<h4><a href=\"TopicPracticePageServlet?topicid="+topic.topicId+"\"><strong>"+topic.getTopicName()+"</strong></a><span class=\"pull-right badge badge-default\">"+topic.getNumberOfQuestions()+" Questions</span></h4>");
-						out.println("<p>Havent taken any assessments yet</p>");
-						out.println("</div>");
-					}
-				%>
-              <!-- page end-->
-          </section>
-      </section>
-      <!--main content end-->
-  </section>
+      <section id="main-content">
+      	<section class="wrapper">
+      	</section>
+  	</section>
+  	<!--main content end-->
   <!-- container section end -->
     <!-- javascripts -->
     <script src="js/jquery.js"></script>
@@ -144,10 +147,4 @@
 	</script>
 
   </body>
-  <%
-	}
-	else{
-		response.sendRedirect("index.jsp");
-	}
-%>
 </html>

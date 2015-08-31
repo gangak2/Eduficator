@@ -1,10 +1,10 @@
 package com.postgres.jdbc;
 
 import java.io.IOException;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import eduficator.data.definition.OpenCourse;
+import eduficator.database.common.*;
 
 /**
  * Servlet implementation class userLoginServlet
@@ -41,12 +41,13 @@ public class userLoginServlet extends HttpServlet {
 		boolean valid = false;
 		try{
 			JDBCConnection database = new JDBCConnection();
-			Statement stmt = database.connection.createStatement();
+			Statement stmt = database.getConnection().createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT id FROM "+ usertype +" WHERE email='" + username + "' AND password='" + password + "'");
 			//valid = rs.next();
 			while(rs.next()){
 				valid = true;
 				StudentDetails studentDetails = new StudentDetails(rs.getString("id"),"students");
+				request.getSession().setAttribute("authenticated", true);
 				request.getSession().setAttribute("activeUserDetails", studentDetails.details);
 			}
 		}catch (SQLException e) {
@@ -58,7 +59,9 @@ public class userLoginServlet extends HttpServlet {
 		}
 		if(valid){
 			System.out.println("Authenticated");
-			RequestDispatcher rd = request.getRequestDispatcher("StudentProfile.jsp");
+			List<OpenCourse> courses = DBQueries.getAllCourses();
+			request.setAttribute("courses", courses);
+			RequestDispatcher rd = request.getRequestDispatcher("okul.jsp");
 			rd.forward(request, response);
 		}
 		else{

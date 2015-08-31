@@ -1,7 +1,6 @@
 package com.postgres.jdbc;
 
 import java.io.IOException;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -10,6 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import eduficator.database.common.JDBCConnection;
 
 /**
  * Servlet implementation class registrationServlet
@@ -38,7 +39,7 @@ public class registrationServlet extends HttpServlet {
 			String password = (String)request.getParameter("password");
 			try {
 				database = new JDBCConnection();
-				Statement stmt = database.connection.createStatement();
+				Statement stmt = database.getConnection().createStatement();
 				String insertStatement = "insert into students (firstname, lastname, email, password) VALUES ('" + firstname + "','" + lastname + "','" + email + "','" + password + "')";
 				stmt.executeUpdate(insertStatement);
 				response.sendRedirect("index.jsp");

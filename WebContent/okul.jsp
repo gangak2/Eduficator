@@ -5,7 +5,7 @@
 <html lang="en">
 	<%
 		if((boolean)request.getSession().getAttribute("authenticated")==true){
-			OpenCourse course = (OpenCourse)request.getAttribute("course");
+			List<OpenCourse> courses = (List<OpenCourse>)request.getAttribute("courses");
 	%>
   <head>
     <title>Course details</title>
@@ -59,25 +59,10 @@
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
                             <li class="eborder-top">
-                                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                                <a href="StudentProfilePageServlet"><i class="icon_profile"></i> My Profile</a>
                             </li>
                             <li>
-                                <a href="#"><i class="icon_mail_alt"></i> My Inbox</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon_clock_alt"></i> Timeline</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon_chat_alt"></i> Chats</a>
-                            </li>
-                            <li>
-                                <a href="login.html"><i class="icon_key_alt"></i> Log Out</a>
-                            </li>
-                            <li>
-                                <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
-                            </li>
-                            <li>
-                                <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
+                                <a href="userLogoutServlet"><i class="icon_key_alt"></i> Log Out</a>
                             </li>
                         </ul>
                     </li>
@@ -92,25 +77,55 @@
       <section id="main-content-fullpage">
           <section class="wrapper">
               <!-- page start-->
-              	<div class="row">
-					<div class="col-lg-10">
-						<h3 class="page-header"> 
-							<a class="" href="CoursePage.jsp">
-                       			<i class="fa fa-caret-square-o-left"></i>
-                  			</a>
-                  			<%=course.getCourseName() %>
-                  		</h3>
-					</div>
-				</div>
-				<%
-					List<Topic> topics = course.getAllTopics(); 
-					for(Topic topic:topics){
-						out.println("<div class=\"panel panel-default col-lg-4\" style=\"border: solid 1px black;\">");
-						out.println("<h4><a href=\"TopicPracticePageServlet?topicid="+topic.topicId+"\"><strong>"+topic.getTopicName()+"</strong></a><span class=\"pull-right badge badge-default\">"+topic.getNumberOfQuestions()+" Questions</span></h4>");
-						out.println("<p>Havent taken any assessments yet</p>");
-						out.println("</div>");
-					}
-				%>
+              <div class="row">
+              		<div class="col-lg-6">
+              			<div class="panel panel-default">
+							<div class="panel-heading">
+	                          <h3>Question of the Day</Char>
+	                        </div>
+	                		<div class="panel-body">
+	                 		 <div class="row" id="questionContainer">
+	                  		<div class="col-lg-12">
+	                  			<p class="text-justify" style="font-size: 15px;">
+	                  			Home, where I learned the truth about despair, as will you. There's a reason why this prison is the worst hell on earth... Hope. Every man who has rotted here over the centuries has looked up to the light and imagined climbing to freedom. So easy... So simple... And like shipwrecked men turning to sea water from uncontrollable thirst, many have died trying. I learned here that there can be no true despair without hope. So, as I terrorize Gotham, I will feed its people hope to poison their souls. I will let them believe they can survive so that you can watch them clambering over each other to stay in the sun. You can watch me torture an entire city and when you have truly understood the depth of your failure, we will fulfill Ra's al Ghul's destiny... We will destroy Gotham and then, when it is done and Gotham is...ashes... then you have my permission to die.
+	                  			</p>
+	                  		</div>
+							<div class="input-group">
+				                <div class="btn-group col-lg-12" data-toggle="buttons">
+				                	<label class="btn btn-default btn-block">
+					                    <input type="radio" value="1" />
+					                    	Gotham needed a hero.
+					                </label>
+					                <label class="btn btn-default btn-block">
+					                    <input type="radio" value="1" />
+					                    	Not everything. Not yet.
+					                </label>
+					                <label class="btn btn-default btn-block">
+					                    <input type="radio" value="1" />
+					                    	The shadows betray you, because they belong to me.
+					                </label>
+					                <label class="btn btn-default btn-block">
+					                    <input type="radio" value="1" />
+					                    	Every Hero Has a Journey. Every Journey Has an End.
+					                </label>
+				                </div>
+				            </div>
+	                  		</div>
+	               			 </div>
+	              		</div>
+              		</div>
+              		<div class="col-lg-6">
+              			<%
+							for(OpenCourse course:courses){
+								out.println("<div class=\"panel panel-default col-lg-12\" style=\"border: solid 1px black;\">");
+								out.println("<h4><a href=\"CoursePageServlet?courseid="+course.courseId+"\"><strong>"+course.getCourseName()+"</strong></a><span class=\"pull-right badge badge-default\">"+course.getAllTopics().size()+" Questions</span></h4>");
+								out.println("<p>Course Details here</p>");
+								out.println("</div>");
+							}
+						%>
+              		</div>
+              		
+              </div>
               <!-- page end-->
           </section>
       </section>

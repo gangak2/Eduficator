@@ -1,7 +1,6 @@
-package com.postgres.jdbc;
+package eduficator.database.admin;
 
 import java.io.IOException;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -10,6 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import eduficator.database.common.JDBCConnection;
 
 /**
  * Servlet implementation class importQuestion
@@ -40,7 +41,7 @@ public class importQuestion extends HttpServlet {
 		String formulae = request.getParameter("_formulae");
 		try {
 			JDBCConnection database = new JDBCConnection();
-			Statement stmt = database.connection.createStatement();
+			Statement stmt = database.getConnection().createStatement();
 			String query = "insert into question (topic, subtopics, questiontext, questiontags, options, processes, steps, formulae) VALUES ('" +
 					topic + "','" + subtopics + "','" + question + "','" + questiontags + "','" + options + "','" + procedure + "','" + steps + "','" + formulae + "')";
 			System.out.println(query);

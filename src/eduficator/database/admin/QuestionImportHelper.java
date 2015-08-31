@@ -1,9 +1,11 @@
-package com.postgres.jdbc;
+package eduficator.database.admin;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+import eduficator.database.common.JDBCConnection;
 
 public class QuestionImportHelper {
 
@@ -14,7 +16,7 @@ public class QuestionImportHelper {
 	}
 	
 	public ArrayList<String> getTopics() throws SQLException{
-		Statement stmt = database.connection.createStatement();
+		Statement stmt = database.getConnection().createStatement();
 		ResultSet topics = stmt.executeQuery("SELECT * FROM topics");
 		ArrayList<String> topicList = new ArrayList<String>();
 		while(topics.next()){
@@ -24,7 +26,7 @@ public class QuestionImportHelper {
 	}
 	
 	public ArrayList<String> getSubTopics(String topic) throws SQLException{
-		Statement stmt = database.connection.createStatement();
+		Statement stmt = database.getConnection().createStatement();
 		ResultSet topics = stmt.executeQuery("SELECT * FROM subtopics WHERE Topic='" + topic + "'");
 		ArrayList<String> topicList = new ArrayList<String>();
 		while(topics.next()){
