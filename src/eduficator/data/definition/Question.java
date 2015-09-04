@@ -23,10 +23,12 @@ public class Question {
 		String questionbody = null;
 		try{
 			Statement stmt = JDBCConnection.connection.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT questionbody FROM questions WHERE questionid='" + this.questionid +"'");
+			String sql = "SELECT body FROM questionbody WHERE id='" + this.questionid +"'";
+			System.out.println(sql);
+			ResultSet rs = stmt.executeQuery(sql);
 			//valid = rs.next();
 			while(rs.next()){
-				questionbody = (String)rs.getString("questionbody");
+				questionbody = (String)rs.getString("body");
 				break;
 			}
 		}catch (SQLException e) {
@@ -36,18 +38,14 @@ public class Question {
 		return questionbody;
 	}
 	
-	public List<String> getQuestionOptions(){
-		List<String> options = new ArrayList<String>();
+	public List<Option> getQuestionOptions(){
+		List<Option> options = new ArrayList<Option>();
 		try{
 			Statement stmt = JDBCConnection.connection.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT optiona,optionb,optionc,optiond FROM questions WHERE questionid='" + this.questionid +"'");
+			ResultSet rs = stmt.executeQuery("SELECT optionid FROM questionoptions WHERE questionid='" + this.questionid +"'");
 			//valid = rs.next();
 			while(rs.next()){
-				options.add((String)rs.getString("optiona"));
-				options.add((String)rs.getString("optionb"));
-				options.add((String)rs.getString("optionc"));
-				options.add((String)rs.getString("optiond"));
-				break;
+				options.add(new Option(rs.getString("optionid")));
 			}
 		}catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -1,0 +1,120 @@
+questionid,topic,questionbody,optiona,optionb,optionc,optiond,correctoption,difficulty
+MTH_SAV_20,1,'Curved surface area of a cone is 308 cm2 and its slant height is 14 cm. Find \\\\(i) radius of the base and \\\\(ii) total surface area of the cone.','$7 cm & 462 cm^2$','$14 & 460 m^2$','$5 & 470 m^2$','$10 & 500 m^2$',A,3.2
+MTH_SAV_-5,1,"'A plastic box 1.5 m long, 1.25 m wide and 65 cm deep is to be made. It is opened at the top.Ignoring the thickness of the plastic sheet, determine the area of the sheet required for making the box'",'$4.0m^2$','$5.0m^2$','$5.45m^2$','$4.54m^2$',C,6.6
+MTH_SAV_-4,1,"'A plastic box 1.5 m long, 1.25 m wide and 65 cm deep is to be made. It is opened at the top. Ignoring the thickness of the plastic sheet, determine the cost of sheet for it,if a sheet measuring 1m2 costs Rs20.'",'Rs 108','Rs 109','Rs 110','Rs 100',B,8.1
+MTH_SAV_-3,1,"'The length, breadth and height of a room are 5 m, 4 m and 3 m respectively. Find the cost of white washing the walls of the room and the ceiling at the rate of 7.50 per m2.'",'Rs 500','Rs 535','Rs 555','Rs 550',C,6.5
+MTH_SAV_-2,1,"'The floor of a rectangular hall has a perimeter 250 m. If the cost of painting the four walls at the rate of `10 per m2 is 5000, find the height of the hall.'",'6 m','60 m','2 m','20 m',A,5.1
+MTH_SAV_46,1,"'A soft drink is available in two packs – \\\\(i) a tin can with a rectangular base of length 5 cm and width 4 cm, having a height of 15 cm and \\\\(ii) a plastic cylinder with circular base of diameter 7 cm and height 10 cm. Which container has greater capacity and by how much?'",'$Tin Can has greater capacity by 75 cm^3$','$Plastic Cylinder has greater capacity by 85 cm^3$','$Tin can has greater capacity by 85 cm^3$','$Plastic Cylinder has greater capacity by 75 cm^3$',B,6.8
+MTH_SAV_6,1,'The curved surface area of a right circular cylinder of height 14 cm is 88 cm2 . Find the diameter of the base of the cylinder.','1.5 cm','2 cm','1cm','0.5 cm',B,1.6
+MTH_POLYNOMIAL_16,2,'What is the zero of the polynomial $p(x) = ax Where a \\neq 0$?','a','0','1','-1',B,0.8
+MTH_POLYNOMIAL_40,2,'What are the possible expressions for the dimensions of the cuboids when volume = $12ky^2+8ky-20k$?','4k','y+1','3y-5','2',A,5.6
+MTH_SAV_0,1,"'A cubical box has each edge 10 cm and another cuboidal box is 12.5 cm long, 10 cm wide and 8 cm high. Which box has the greater lateral surface area and by how much?'",'Lateral surface area of cube is greater than cuboid by $40cm^2$ ','Lateral surface area of cuboid is greater than cube by $40cm^2$','Lateral surface area of cuboid is greater than cube by $50cm^2$','Lateral surface area of cube is grater than cuboid by $50cm^2$',A,2.8
+MTH_SAV_1,1,"'A cubical box has each edge 10 cm and another cuboidal box is 12.5 cm long, 10 cm wide and 8 cm high. Which box has the smaller total surface area and by how much?'",'Total surface area of cuboid is greater than cube by $10cm^2$','Total surface area of cuboid is greater than cube by $10cm^2$','Total surface area of cuboid is greater than cube by $5cm^2$','Total surface area of cuboid is greater than cube by $5cm^2$',B,3
+MTH_SAV_2,1,"'A small indoor greenhouse (herbarium) is made entirely of glass panes (including base) held together with tape. It is 30 cm long, 25 cm wide and 25 cm high.What is the area of the glass?'",'$4255cm^2$','4250 cm^2$','$5250 cm^2$','$5255 cm^2$',B,2
+MTH_SAV_3,1,"'A small indoor greenhouse (herbarium) is made entirely of glass panes (including base) held together with tape. It is 30 cm long, 25 cm wide and 25 cm high.How much of tape is needed for all the 12 edges?'",'310 cm','340 cm','320 cm','300 cm',C,1.6
+MTH_SAV_4,1,"'Shanti Sweets Stall was placing an order for making cardboard boxes for packing their sweets.Two sizes of boxes were required.The bigger of dimensions 25 cm × 20 cm × 5 cm and the smaller of dimensions 15 cm × 12 cm × 5 cm. For all the overlaps, 5% of the total surface area is required extra. If the cost of the cardboard is 4 for 1000 cm2, find the cost of cardboard required for supplying 250 boxes of each kind.'",'Rs 2224','Rs 2100','Rs 2186','Rs 2184',D,9.8
+MTH_SAV_27,1,'Find the surface area of a sphere of diameter 3.5 cm.','$38.5 m^2$','$42.5 m^2$','$38.0 m^2$','$42 m^2$',A,2
+MTH_POLYNOMIAL_3,2,'Which of the following is a binomial of degree 35?','$x^35-2$','$x^35$','$x^35+x^34+2$','35x-2',A,0.8
+MTH_POLYNOMIAL_4,2,'What is the degree of the polynomial $35x^4+x^3-4x$?','35','4','3','1',B,0.8
+MTH_POLYNOMIAL_5,2,'Which of the following is a cubic polynomial?','$x^2+x$','$x^3$','3x-2','$x^4+x^3-3$',B,0.8
+MTH_POLYNOMIAL_6,2,'What are the maximum number of terms in a polynomial in one variable with degree 4?','4','5','6','3',B,1
+MTH_POLYNOMIAL_7,2,'What is the degree of zero polynomial?','0','1','2','not defined',D,1
+MTH_POLYNOMIAL_8,2,'What is the degree of non zero constant polynomial?','0','1','2','not defined',A,1
+MTH_POLYNOMIAL_9,2,'What are the maximum number of terms in a polynomial in one variable with degree n?','n','n+1','n-1','not defined',B,1.2
+MTH_POLYNOMIAL_11,2,'What is the value of the polynomial $5x-4x^2+3 at x = -1$?','-8','2','0','5',A,0.8
+MTH_POLYNOMIAL_12,2,'What is the value of the polynomial $5x-4x^2+3 at x = 0$?','3','0','5','-4',A,0.6
+MTH_POLYNOMIAL_13,2,'What is the value of $p(0)$ of the polynomial $p(x) = (x– 1) (x+ 1)$ ?','0','-1','2','1',B,0.9
+MTH_POLYNOMIAL_14,2,'What is the value of $p(1)$ of the polynomial $p(x) = 2 + t^2 + t^3 - 3t $?','1','0','-1','7',A,1
+MTH_POLYNOMIAL_15,2,'What is the zero of the polynomial $p(x) = x^2$?','0','1','-1','2',A,0.8
+MTH_SAV_5,1,"'Parveen wanted to make a temporary shelter for her car, by making a box-like structure with tarpaulin that covers all the four sides and the top of the car (with the front face as a flap which can be rolled up). Assuming that the stitching margins are very small, and therefore negligible, how much tarpaulin would be required to make the shelter of height 2.5 m, with base dimensions 4 m × 3 m?'",'$47 m^2$','$50 m^2$','$48 m^2$','$48.5 m^2$',A,2.6
+MTH_SAV_7,1,'It is required to make a closed cylindrical tank of height 1 m and base diameter 140 cm from a metal sheet. How many square metres of the sheet are required for the same?','$8.60 m^2$','$8.38 m^2$','$7.5 m^2$','$7.48 m^2$',D,2.2
+MTH_SAV_8,1,"'A metal pipe is 77 cm long. The inner diameter of a cross section is 4 cm, the outer diameter being 4.4 cm. Find its inner curved surface area.'",'$968 cm^2$','$1068 cm^2$','$868 cm^2$','$1168 cm^2$',A,2
+MTH_SAV_9,1,"'A metal pipe is 77 cm long. The inner diameter of a cross section is 4 cm, the outer diameter being 4.4 cm. Find its outer curved surface area.'",'$1064.8 cm^2$','$1068.0 cm^2$','$1064.0 cm^2$','$1064.2 cm^2$',A,2
+MTH_SAV_10,1,"'A metal pipe is 77 cm long. The inner diameter of a cross section is 4 cm, the outer diameter being 4.4 cm. Find its total surface area.'",'$1889.08 cm^2$','$2038.08 cm^2$','$1958.08 cm^2$','$1968.08 cm^2$',B,4.3
+MTH_SAV_11,1,'The diameter of a roller is 84 cm and its length is 120 cm. It takes 500 complete revolutions to move once over to level a playground. Find the area of the playground in m2.','$1624 cm^2$','$1364 cm^2$','$1884 cm^2$','$1584 cm^2$',D,4.3
+MTH_SAV_12,1,'A cylindrical pillar is 50 cm in diameter and 3.5 m in height. Find the cost of painting the curved surface of the pillar at the rate of  Rs 12.00 per m2.','Rs 52.50','Rs 60.00','Rs 65.50','Rs 66.00',D,3.6
+MTH_SAV_13,1,"'Curved surface area of a right circular cylinder is 4.4 m2. If the radius of the base of the cylinder is 0.7 m, find its height.'",'1 m','2.5 m','0.5 m','2 m',A,2
+MTH_SAV_14,1,'The inner diameter of a circular well is 3.5 m. It is 10 m deep. Find the cost of plastering its inner curved surface at the rate of  Rs 40 per m2.','Rs 4540','Rs 3900','Rs 4400','Rs 4200',C,3.6
+MTH_SAV_15,1,"'In a hot water heating system, there is a cylindrical pipe of length 28 m and diameter 5 cm. Find the total radiating surface in the system.'",'$3.8 m^2$','$4.14 m^2$','$4.4 m^2$','$4.7 m^2$',C,2
+MTH_SAV_16,1,"'Find the lateral or curved surface area of a closed cylindrical petrol storage tank that is 4.2 m in diameter and 4.5 m high. And how much steel was actually used, if 1/12 of the steel actually used was wasted in making the tank.'",'$95.04 m^2$','$91.0 m^2$','$85.5 m^2$','$89.94 m^2$',A,5.6
+MTH_POLYNOMIAL_2,2,'What is the coefficient of $x^2$ in $\\sqrt{2x^2}-2x+3$?','-2','3','0','\\sqrt{2}',D,0.8
+MTH_POLYNOMIAL_1,2,'Which of the following expressions are polynomials in one variable?','$4x^2–3x+7-t$','$y^2+\\sqrt{y}$','$y+1/2y$','$\\sqrt{t} + y\\sqrt{t}$',C,0.8
+MTH_POLYNOMIAL_10,2,'Which of the following expressions are polynomials in two variables?','$4x^2–3x+7-t^2+t$','$y^2+\\sqrt{y}$','y+1/2y','$\\sqrt{t} + y\\sqrt{t}$',A,1
+MTH_POLYNOMIAL_17,2,'What are the number of zeroes of a linear polynomial?','0','1','2','not defined',B,1.2
+MTH_POLYNOMIAL_18,2,'What are the number of zeroes of a non zero constant polynomial?','0','1','2','any real number',A,1.2
+MTH_POLYNOMIAL_19,2,'What are the number of zeroes of a zero polynomial?','0','1','2','any real number',D,1.2
+MTH_POLYNOMIAL_20,2,'What is the root of the eqaution $x-1=0$ ?','1','0','2','-1',A,0.8
+MTH_POLYNOMIAL_21,2,'What is the remainder when $x^3 + 3x^2 +3x +1$ is divided by $x+1$ ?','0','1','2','3',A,1.6
+MTH_POLYNOMIAL_22,2,'What is the remainder when $x^3 + 3x^2 +3x +1$ is divided by $x$ ?','1','0','x','2',A,1.2
+MTH_POLYNOMIAL_23,2,'What is the remainder when $x^3 - ax^2 +6x - a$ is divided by $x - a$ ?','0','5a','$2a^3 + 5a$','$a^3$',B,2.2
+MTH_POLYNOMIAL_24,2,'Which of the following polynomials has $(x+ 1)$ a factor ?','$x^3 + x ^2 + x +1$','$x^4 + x^3 + x ^2 + x +1$','$x^4 + 3x^3 + 3x ^2 + x +1$','$x^3 - x ^2 - (2+\sqrt{2})x + \sqrt{2}$',A,2.6
+MTH_POLYNOMIAL_25,2,'What is g(x) if g(x) is the factor of $p(x) = 2x^3+ x^2– 2x– 1$?','x^2','x+1','x','2x+1',B,4
+MTH_POLYNOMIAL_26,2,'What is g(x) if g(x) is the factor of $p(x) = 2x^3+ x^2– 2x– 1$ ?','x^2','x','x-1','2x-1',C,4
+MTH_POLYNOMIAL_27,2,"'What is the value of k, if $x– 1$ is a factor of $p(x) = x^2+ x+ k$?'",'-2','1','0','2',A,2.2
+MTH_POLYNOMIAL_28,2,'What are the factors of $12x^2-7x+1$?','4x+1','3x+1','3x-1','4x+2',C,2.8
+MTH_POLYNOMIAL_29,2,'What is the product of $(x+4)(x+10)$?','$x^2+x+40$','$x^2+14x+40$','$x^2+14x+10$','$x^2+x+4$',B,1.4
+MTH_POLYNOMIAL_30,2,'What is the product of $(y^2+3/2)(y^2-3/2)$?','$y^4+9/4$','$y^2-9/4$','$y^2+9/4$','$y^4-9/4$',D,1.4
+MTH_POLYNOMIAL_31,2,'What is the product of $103*107$ without multiplying directly?','11000','10021','11021','11012',C,3.2
+MTH_POLYNOMIAL_32,2,'What are the factors of $9x^2 + 6xy + y^2$ using identities?','3x-y','3x+y','3y+x','3y+3x',B,2.8
+MTH_POLYNOMIAL_33,2,'Expand $p(x) = (2x-y+z)^2$','$4x^2+y^2+z^2-4xy+2yz+4xz$','$4x^2+y^2+z^2-4xy-2yz-4xz$','$2x^2+y^2+z^2-4xy-2yz+4xz$','$4x^2+y^2+z^2-4xy-2yz+4xz$',D,2
+MTH_POLYNOMIAL_34,2,'Factorise $p(x) = 4x^2+ 9y^2+ 16z^2+ 12xy– 24yz– 16xz$','$(2x-3y-4z)^2$','$(2x-3y+4z)^2$','$(2x+3y-4z)^2$','$(2x+3y+4z)^2$',B,2.8
+MTH_POLYNOMIAL_35,2,'What is the cube of $(2a-3b)$?','$8a^3-27b^3+36a^2b+54ab^2$','$8a^3-27b^3-36a^2b+54ab^2$','$8a^3+27b^3-36a^2b+54ab^2$','$8a^3-27b^3-36a^2b-54ab^2$',B,2.6
+MTH_POLYNOMIAL_36,2,'Evaluate $998^3$ using suitable identities','2994','2995','2993','2991',A,2.8
+MTH_POLYNOMIAL_37,2,'IF x+y+z = 0 then what is the value of $x^3+y^3+z^3$?','0','xyz','2xyz','3xyz',D,4.4
+MTH_POLYNOMIAL_38,2,'What are the factors of p(x) = $27x^3 +y^3+z^3-9xyz$?','3x-y-z','3x+y+z','3x+y-z','3x-y+z',B,5.6
+MTH_POLYNOMIAL_39,2,'What are the possible expressions for the dimensions of the rectangle when area = $25a^2-35a+12$','5a-3','5a-2','5a+4','5a+3',A,5.6
+MTH_SAV_-1,1,'The paint in a certain container is sufficient to paint an area equal to 9.375 m2. How many bricks of dimensions 22.5 cm × 10 cm × 7.5 cm can be painted out of this container?','120','100','110','125',B,5.2
+MTH_SAV_26,1,'Find the surface area of a sphere of radius 10.5 cm.','$1100 cm^2$','$1245 cm^2$','$1386 cm^2$','$1345 cm^2$',C,2
+MTH_SAV_17,1,"'The students of a Vidyalaya were asked to participate in a competition for making and decorating penholders in the shape of a cylinder with a base, using cardboard. Each penholder was to be of radius 3 cm and height 10.5 cm. The Vidyalaya was to supply the competitors with cardboard. If there were 35 competitors, how much cardboard was required to be bought for the competition?'",'$7460 cm^2$','$8390 cm^2$','$7230 cm^2$','$7920 cm^2$',D,6.1
+MTH_SAV_19,1,"'Find the total surface area of a cone, if its slant height is 21 m and diameter of its base is 28 m.'",'$1540 m^2$','$1635 m^2$','$1264 m^2$','$1325 m^2$',A,2.2
+MTH_SAV_21,1,"'A conical tent is 10 m high and the radius of its base is 24 m. Find cost of the canvas required to make the tent, if the cost of 1 m2 canvas is Rs70'",'Rs 12983','Rs 13728','Rs 13500','Rs 13874',B,6.4
+MTH_SAV_22,1,'What length of tarpaulin 3 m wide will be required to make conical tent of height 8 m and base radius 6 m? Assume that the extra length of material that will be required for stitching margins and wastage in cutting is approximately 20 cm.','63 m','69 m','66 m','72 m',A,6.9
+MTH_SAV_23,1,'The slant height and base diameter of a conical tomb are 25 m and 14 m respectively. Find the cost of white-washing its curved surface at the rate of  Rs 210 per 100 m2.','Rs 1155','Rs 1245','Rs 1235','Rs 1175',A,3.6
+MTH_SAV_25,1,"'A bus stop is barricaded from the remaining part of the road, by using 50 hollow cones made of recycled cardboard. Each cone has a base diameter of 40 cm and height 1 m. If the outer side of each of the cones is to be painted and the cost of painting is Rs12 per m2, what will be the cost of painting all these cones? (Use ? = 3.14 and take sqrt (1.04)= 1.02).'",'Rs 364.24','Rs 384.34','Rs 390.20','Rs 330.00',B,9.8
+MTH_SAV_28,1,'Find the total surface area of a hemisphere of radius 10 cm.','$856 cm^2$','$890 cm^2$','$843 cm^2$','$942 cm^2$',D,2.5
+MTH_SAV_29,1,'The radius of a spherical balloon increases from 7 cm to 14 cm as air is being pumped into it. Find the ratio of surface areas of the balloon in the two cases.','0.0444444444444444','0.0430555555555556','0.04375','0.0423611111111111',A,2.8
+MTH_SAV_30,1,'A hemispherical bowl made of brass has inner diameter 10.5 cm. Find the cost of tin-plating it on the inside at the rate of  Rs 16 per 100 cm2.','Rs 25.77','Rs 27.72','Rs 29.50','Rs 22.30',B,3.3
+MTH_SAV_32,1,'The diameter of the moon is approximately one fourth of the diameter of the earth. Find the ratio of their surface areas.','0.0472222222222222','0.0444444444444444','0.0527777777777778','0.0638888888888889',C,2.3
+MTH_SAV_33,1,"'A hemispherical bowl is made of steel, 0.25 cm thick. The inner radius of the bowl is 5 cm. Find the outer curved surface area of the bowl.'",'$179.23 cm^2$','$169.30 cm^2$','$166.45 cm^2$','$173.25 cm^2$',D,2.2
+MTH_SAV_34,1,'A right circular cylinder just encloses a sphere of radius r. Find ratio of the surface area of sphere and curved surface area of cylinder.','0.0451388888888889','0.0423611111111111','0.0430555555555556','0.04375',B,3.8
+MTH_SAV_35,1,'A matchbox measures 4 cm × 2.5 cm × 1.5 cm. What will be the volume of a packet containing 12 such boxes?','$150 cm^3$','$180 cm^3$','$210 cm^3$','$240 cm^3$',B,2.5
+MTH_SAV_36,1,"'A cuboidal water tank is 6 m long, 5 m wide and 4.5 m deep. How many litres of water can it hold? (1 m3 = 1000 l)'",'135000 L','125000 L','112000 L','100000 L',A,2.2
+MTH_SAV_37,1,'A cuboidal vessel is 10 m long and 8 m wide. How high must it be made to hold 380 cubic metres of a liquid?','3.45 m','2.37 m','4.75 m','5 m',C,2.2
+MTH_SAV_38,1,"'Find the cost of digging a cuboidal pit 8 m long, 6 m broad and 3 m deep at the rate of Rs 30 per m3.'",'Rs 4568','Rs 4320','Rs 4590','RS 4367',B,3.3
+MTH_SAV_39,1,"'The capacity of a cuboidal tank is 50000 litres of water. Find the breadth of the tank, if its length and depth are respectively 2.5 m and 10 m.'",'1 m','4 m','8 m','2 m',D,3.8
+MTH_SAV_40,1,"'A village, having a population of 4000, requires 150 litres of water per head per day. It has a tank measuring 20 m × 15 m × 6 m. For how many days will the water of this tank last?'",'2 days','1 day','3 days','4 days',C,5.3
+MTH_SAV_41,1,'A godown measures 40 m × 25 m × 15 m. Find the maximum number of wooden crates each measuring 1.5 m × 1.25 m × 0.5 m that can be stored in the godown.','10645','10545','10345','10666',D,3.8
+MTH_SAV_42,1,'A solid cube of side 12 cm is cut into eight cubes of equal volume. Find the ratio between the surface area of old cube and new cube.','0.167361111111111','0.125694444444444','0.04375','0.0423611111111111',A,5.7
+MTH_SAV_44,1,'The circumference of the base of a cylindrical vessel is 132 cm and its height is 25 cm. How many litres of water can it hold? (1000 cm3 = 1 L)','32.00 L','35.45 L','34.50 L','34.65 L',D,4.2
+MTH_SAV_47,1,"'If the lateral surface of a cylinder is 94.2 cm2and its height is 5 cm, then its volume. (Use ? = 3.14)'",'$145.0 cm^3$','$146.3 cm^3$','$141.3 cm^3$','$140.4 cm^3$',C,5
+MTH_SAV_48,1,"'It costs Rs 2200 to paint the inner curved surface of a cylindrical vessel 10 m deep. If the cost of painting is at the rate of `20 per m2 , find capacity of the vessel'",'98340 L','98474 L','92474 L','96250 L',D,10.2
+MTH_SAV_31,1,'Find the radius of a sphere whose surface area is 154 cm2.','3.3 cm','3.2 cm','3.5 cm','3.0 cm',C,2
+MTH_SAV_24,1,'A joker’s cap is in the form of a right circular cone of base radius 7 cm and height 24 cm. Find the area of the sheet required to make 10 such caps.','$6600 cm^2$','$5550 cm^2$','$5500 cm^2$','$6000 cm^2$',C,6.4
+MTH_SAV_45,1,"'The inner diameter of a cylindrical wooden pipe is 24 cm and its outer diameter is 28 cm. The length of the pipe is 35 cm. Find the mass of the pipe, if 1 cm^3 of wood has a mass of 0.6 g.'",'3.594 Kg','3.745 Kg','3.432 Kg','3.8 Kg',C,6.6
+MTH_SAV_49,1,'The capacity of a closed cylindrical vessel of height 1 m is 15.4 litres. How many\\\\square metres of metal sheet would be needed to make it?','$0.4708 m^2$','$0.5938 m^2$','$0.4637 m^2$','$0.3900 m^2$',A,7.3
+MTH_SAV_50,1,"'A lead pencil consists of a cylinder of wood with a solid cylinder of graphite filled in the interior. The diameter of the pencil is 7 mm and the diameter of the graphite is 1mm.If the length of the pencil is 14 cm, find the ratio of volume of the wood and that of the graphite.'",'2.00069444444444','1.75069444444444','1.41736111111111','1.87569444444444',A,5.4
+MTH_SAV_51,1,"'A patient in a hospital is given soup daily in a cylindrical bowl of diameter 7 cm. If the bowl is filled with soup to a height of 4 cm, how much soup the hospital has to prepare daily to serve 250 patients?'",'40 L','35L','37.5 L','38.5 L',D,3.8
+MTH_SAV_52,1,'Find the volume of the right circular cone with radius 6 cm and height 7 cm.','$264 cm^3$','$235 cm^3$','$277 cm^3$','$280 cm^3$',A,2.8
+MTH_SAV_53,1,'Find the volume of the right circular cone with radius 3.5 cm and height 12 cm.','$153 cm^3$','$135 cm^3$','$154 cm^3$','$145 cm^3$',C,2.8
+MTH_SAV_54,1,'Find the capacity in litres of a conical vessel with radius 7 cm and slant height 25 cm','1.200 L','1.232 L','1.245 L','1.243 L',B,4.5
+MTH_SAV_55,1,'Find the capacity in litres of a conical vessel with radius 12 cm and slant height 13 cm','11/35 L','24/35 L','9/35 L','36/35 L',A,4.5
+MTH_SAV_56,1,"'The height of a cone is 15 cm. If its volume is 1570 cm3 , find the radius of the base. (Use ? = 3.14)'",'20 cm','25 cm','15 cm','10 cm',D,2.8
+MTH_SAV_57,1,"'If the volume of a right circular cone of height 9 cm is 48? cm3, find the diameter of its base.'",'8 cm','16 cm','10 cm','15 cm',A,2.8
+MTH_SAV_58,1,'A conical pit of top diameter 3.5 m is 12 m deep. What is its capacity in kilolitres?','32.5 kL','33 kL','38.5 kL','40 kL',C,2.8
+MTH_SAV_59,1,"'The volume of a right circular cone is 9856 cm3. If the diameter of the base is 28 cm,find curved surface area of the cone.'",'$2500 cm^2$','$2350 cm^2$','$2200 cm^2$','$2410 cm^2$',C,7
+MTH_SAV_60,1,"'A right triangle ABC with sides 5 cm, 12 cm and 13 cm is revolved about the side 12 cm.Find the volume of the solid so obtained.'",'$95 \pi  cm^3$','$100 \pi  cm^3$','$110 \pi  cm^3$','$102 \pi  cm^3$',B,3.6
+MTH_SAV_61,1,"'A right triangle ABC with sides 5 cm, 12 cm and 13 cm is revolved about the side 12 cm and 5 cm respectively, Find also the ratio of the volumes of the two solids.'",'0.3','0.425','0.341666666666667','0.216666666666667',D,4.2
+MTH_SAV_62,1,'A heap of wheat is in the form of a cone whose diameter is 10.5 m and height is 3 m.The heap is to be covered by canvas to protect it from rain. Find the area of the canvas required.','$99.825 m^2$','$99.245 m^2$','$97.235 m^2$','$97.785 m^2$',A,5.1
+MTH_SAV_63,1,'Find the volume of a sphere whose radius is 7 cm.','4312/3','4400/3','4450/3','4341/3',A,2
+MTH_SAV_64,1,'Find the volume(approx) of a sphere whose radius is 0.63 cm.','$1.05 m^3$','$1.1 m^3$','$1.5 m^2$','$1.4 m^3$',A,2
+MTH_SAV_65,1,'Find the amount of water displaced by a solid spherical ball of diameter 42 cm.','$36897 cm^3$','$32980 cm^3$','$38808 cm^3$','$36784 cm^3$',C,3.4
+MTH_SAV_66,1,"'The diameter of a metallic ball is 4.2 cm. What is the mass of the ball, if the density of the metal is 8.9 g per cm3 ?'",'350.00 g','345.39 g','335.37 g','378.87 g',B,4.7
+MTH_SAV_67,1,'The diameter of the moon is approximately one-fourth of the diameter of the earth. What fraction of the volume of the earth is the volume of the moon?','0.0638888888888889','0.0527777777777778','0.0472222222222222','0.0861111111111111',D,4
+MTH_SAV_68,1,'How many litres of milk can a hemispherical bowl of diameter 10.5 cm hold?','0.404 L','0.540 L','0.303 L','0.606 L',C,4.4
+MTH_SAV_69,1,"'A hemispherical tank is made up of an iron sheet 1 cm thick. If the inner radius is 1 m,then find the volume of the iron used to make the tank.'",'$0.6897 m^3$','$0.6348 m^3$','$0.6587 m^3$','$0.6630 m^3$',B,5.6
+MTH_SAV_70,1,'Find the volume of a sphere whose surface area is 154 cm2.','539/3','584/3','575/3','509/3',A,4.7
+MTH_SAV_71,1,"'A dome of a building is in the form of a hemisphere. From inside, it was white-washed at the cost of Rs 498.96. If the cost of white-washing is Rs 2.00 per square metre, find the volume of the air inside the dome.'",'$546.8 m^3$','$582.1 m^3$','$523.9 m^3$','$563.3 m^3$',C,9.6
+MTH_SAV_72,1,"'Twenty seven solid iron spheres, each of radius r and surface area S are melted to form a sphere with surface area S?. Find the ratio of S and S?.'",'0.0472222222222222','0.0479166666666667','0.0430555555555556','0.0451388888888889',B,9.4
+MTH_SAV_73,1,'A capsule of medicine is in the shape of a sphere of diameter 3.5 mm. How much medicine (in mm3) is needed to fill this capsule?','$20.2 mm^3$','$22.0 mm^3$','$21.0 mm^3$','$22.46 mm^3$',D,3.6
+MTH_SAV_18,1,'Diameter of the base of a cone is 10.5 cm and its slant height is 10 cm. Find its curved surface area.','$139 cm^2$','$148 cm^2$','$165 cm^2$','$177 cm^2$',C,2.2
+MTH_SAV_43,1,'A river 3 m deep and 40 m wide is flowing at the rate of 2 km per hour. How much water will fall into the sea in a minute?','$2000 m^2$','$4000 m^3$','$2500 m^3$','$3000 m^3$',B,7.2

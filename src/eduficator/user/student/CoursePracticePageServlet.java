@@ -1,6 +1,7 @@
 package eduficator.user.student;
 
 import java.io.IOException;
+import java.util.UUID;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

@@ -51,6 +51,14 @@
 			margin-top: -20px;
 			font-size: 15px;
 		}
+		
+		.active{
+			display: block;
+		}
+		
+		.inactive{
+			display: none;
+		}
     </style>
   </head>
 
@@ -135,48 +143,79 @@
 				<div class="row" id="assesment">
 					<section class="panel">
 						<div class="assessment-panel-heading">
-	                         <h2>Initial Assessment Test<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span></h2>
-	                         <p>This is initial assessment test. Your honest responses will help system better understand your command over topic and will generate tests accordingly. There are 20 questions, answer to each is a must.</p>
+	                         <h2>Initial Assessment Test<a id="assessmentheader" href="#" class="btn" data-toggle="popover" data-trigger="hover">?</a><span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span></h2>
 	                     </div>
-	                     <div class="panel-body" id="questions">
+	                     <div class="panel-body" id="assessment">
+	                     	<div class="col-lg-3">
+	                     		<header class="panel-heading">
+			                          <h3>Instructions</Char>
+			                      </header>
+			                      <div class="assessment-question">
+			                      	<ul>
+			                      		<li>
+			                      			<i class="fa fa-caret-right"></i>&nbsp;This is an initial assessment test
+			                      		</li>
+			                      		<li>
+			                      			<i class="fa fa-caret-right"></i>&nbsp;Each question has one correct answer
+			                      		</li>
+			                      	</ul>
+			                      </div>
+	                     	</div>
 	                     	
-							<div class="col-lg-12">
+	                     	<script>
+	                     		var questions = [];
+	                     	</script>
+	                     	
+							<div class="col-lg-9">
 							<%
 								List<Question> questions = topic.getAllQuestions();
 							    int i=1;
 								for(Question question:questions){
+									
 							%>
+								<script>
+									questions.push('<%=question.questionid%>');
+								</script>
+								<div id="<%=question.questionid%>" class="<%if(i==1) out.print("active"); else out.print("inactive");%>">
 				                      <header class="panel-heading">
-				                          <h3>Question <%=i++ %></Char>
+				                          <h3>Question <%=i %></Char>
 				                      </header>
                       
-                      				<div class="row assessment-question" style="margin-bottom: 10px;">
-                  						<div class="col-lg-12" style="padding-left: 2%;">
-                  							<p class="text-justify" style="font-size: 15px;">
-                  								<script type="text/javascript">
-													document.write(ltxParse(<%=question.getQuestionBody() %>));
-												</script>
-                  							</p>
-		                  					<div class="input-group" id="optionsContainer">
-				                  				<div class="btn-group col-lg-12" data-toggle="buttons">
-					                  			<%
-					                  				List<String> options = question.getQuestionOptions();
-					                  				for(String option:options){
-					                  			%>
-									                <label class="btn btn-default btn-block">
-									                    <input type="radio" value="<%=option %>" /> 
-									                    	<script type="text/javascript">
-																document.write(ltxParse(<%=option %>));
-															</script>
-									                </label>
-								                <%
-					                  				}
-								                %>
-							            		</div>
-						        			</div>
-                  						</div>
+	                      				<div class="row assessment-question" style="margin-bottom: 10px;">
+	                  						<div class="col-lg-12" style="padding-left: 2%;">
+	                  							<p class="text-justify" style="font-size: 15px;">
+	                  								<script type="text/javascript">
+														document.write(ltxParse("<%=question.getQuestionBody() %>"));
+													</script>
+	                  							</p>
+			                  					<div class="input-group" id="optionsContainer">
+					                  				<div class="btn-group col-lg-12" data-toggle="buttons">
+						                  			<%
+						                  				List<Option> options = question.getQuestionOptions();
+						                  				for(Option option:options){
+						                  			%>
+										                <label class="btn btn-default btn-block" onclick="questionResponded(<%=i%>);">
+										                    <input type="radio" value="<%=option %>" /> 
+										                    	<script type="text/javascript">
+																	document.write(ltxParse("<%=option.getOptionBody() %>"));
+																</script>
+										                </label>
+									                <%
+						                  				}
+									                %>
+									                	<label class="btn btn-default btn-block" onclick="questionResponded(<%=i%>);">
+										                    <input type="radio" value="skip" /> 
+										                    	<script type="text/javascript">
+																	document.write(ltxParse("I dont know."));
+																</script>
+										                </label>
+								            		</div>
+							        			</div>
+	                  						</div>
+	                  					</div>
                   					</div>
 			                    <%
+			                    i++;
 			                    }
 			                    %>
 							</div>
@@ -184,6 +223,7 @@
                      </section>
 				</div>
               <!-- page end-->
+              
           </section>
       </section>
       <!--main content end-->
@@ -202,6 +242,12 @@
     <!--custome script for all page-->
     <script src="js/scripts.js"></script>
 	<script>
+		$(document).ready(function(){
+		    $('#assessmentheader').popover({
+		    	title: 'Enter Mobile Number', 
+		        content: "Please enter 10 digit mobile number prefixed by country code eg +911234567890"
+		    });   
+		});
 		$(document).on('click', '.assessment-panel-heading span.clickable', function(e){
 		    var $this = $(this);
 			if(!$this.hasClass('panel-collapsed')) {
@@ -214,6 +260,12 @@
 				$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
 			}
 		});
+		
+		function questionResponded(num){
+			//Hide the current question and fetch the next one
+			$('#'+questions[(num-1)%questions.length]).removeClass('active').addClass('inactive');
+			$('#'+questions[(num)%questions.length]).removeClass('inactive').addClass('active');
+		}
 	</script>
 
   </body>

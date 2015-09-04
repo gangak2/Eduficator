@@ -35,7 +35,7 @@ public class StudentDetails {
 				break;
 			}
 			//Fetching user enrolled courses and corresponding details
-			String getEnrolledCourses = "SELECT oc.subject as subject, oc.class as class, oce.proficiency as proficiency FROM openclassroomenrollments AS oce inner join openclassrooms AS oc ON oc.id = oce.classroom WHERE oce.student = " + this.userid;
+			String getEnrolledCourses = "SELECT oc.subject as subject, oc.class as class, oce.proficiency as proficiency FROM courseenrollments AS oce inner join coursebody AS oc ON oc.id = oce.courseid WHERE oce.studentid = " + this.userid;
 			//Statement stmtEnrolledCourses = database.getConnection().createStatement();
 			ResultSet rocs = stmtDetails.executeQuery(getEnrolledCourses);
 			List<EnrolledCourse> openClassroomEnrolledCourses = new ArrayList<EnrolledCourse>();
@@ -48,7 +48,7 @@ public class StudentDetails {
 			}
 			this.details.put("openClassroomEnrolledCourses", openClassroomEnrolledCourses);
 			//Fetching openclassroom suggestions
-			String getAvailabelOpenClassrooms = "SELECT * FROM get_available_openclassrooms( "+ this.userid + ")";
+			String getAvailabelOpenClassrooms = "SELECT * FROM get_available_courses( "+ this.userid + ")";
 			ResultSet raocs = stmtDetails.executeQuery(getAvailabelOpenClassrooms);
 			List<ClassroomCourse> availabelClassroomCourses = new ArrayList<ClassroomCourse>();
 			while(raocs.next()){

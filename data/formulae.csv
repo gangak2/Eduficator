@@ -1,0 +1,18 @@
+topic,subtopic,formula,time
+Surface Areas And Volume,Surface area of cube & cuboid,S=2(lb+bh+hl),4
+Surface Areas And Volume,Surface area of cube & cuboid,LS=2(l+b)h,4
+Surface Areas And Volume,Surface area of cube & cuboid,P=4(l + b + h),4
+Surface Areas And Volume,Surface area of cube & cuboid,S=6a^2,4
+Surface Areas And Volume,Surface area of cube & cuboid,LS=4a^2,4
+Surface Areas And Volume,Surface area of cube & cuboid,P=12a,4
+Surface Areas And Volume,Surface area of right circular cylinder,CS=2πrh,4
+Surface Areas And Volume,Surface area of right circular cylinder,S=2πr(h+r),4
+Surface Areas And Volume,Surface area of right circular cone,CS=πrl,4
+Surface Areas And Volume,Surface area of right circular cone,S=πrl+πr^2,8
+Surface Areas And Volume,Surface area of right circular cone,l^2=r^2+h^2,8
+Surface Areas And Volume,Surface area of a sphere,S=4πr^2,8
+Surface Areas And Volume,Volume of a cuboid,V=lbh,4
+Surface Areas And Volume,Volume of a cuboid,V=a^3,4
+Surface Areas And Volume,Volume of a cylinder,V=πr^2h,8
+Surface Areas And Volume,Volume of a right circular Cone,V=1/3πr^2h,8
+Surface Areas And Volume,Volume of a sphere,V=4/3πr^3,8

@@ -2,6 +2,7 @@ package eduficator.user.student;
 
 import java.io.IOException;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import eduficator.data.definition.OpenCourse;
 import eduficator.data.definition.Topic;
 
+import java.util.UUID;
 /**
  * Servlet implementation class TopicPracticePageServlet
  */
